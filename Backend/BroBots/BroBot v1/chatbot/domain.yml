@@ -18,6 +18,32 @@ intents:
   - inform_sleep_time
   - inform_today_goal
 
+slots:
+  name:
+    type: text
+    influence_conversation: false
+  gender:
+    type: text
+    influence_conversation: false
+  age:
+    type: text
+    influence_conversation: false
+  sleep_time:
+    type: text
+    influence_conversation: false
+  today_goal:
+    type: text
+    influence_conversation: false
+  eat_healthy:
+    type: text
+    influence_conversation: false
+
+entities:
+  - name
+  - gender
+  - age
+  - today_goal
+  - sleep_time
 
 responses:
   utter_greet:
@@ -53,19 +79,22 @@ responses:
   utter_ask_gender:
     - text: "Are you a male or a female?"
 
-  utter_ask_sleep:
+  utter_ask_sleep_time:
     - text: "How much sleep did you have yesterday?"
     - text: "How much sleep did you get last night?"
 
-  utter_ask_healthy:
+  utter_ask_eat_healthy:
     - text: "Did you eat healthy yesterday?"
 
-  utter_ask_goal:
+  utter_ask_today_goal:
     - text: "Setting Goals - even small ones - is a great way to focus your day. What do you want to do today?"
     - text: "Setting Goals - even small ones - is a great way to focus your day. What is your goal today?"
 
   utter_no_worries:
     - text: "No worries! :)"
+
+  utter_someother_time:
+    - text: "Let's continue some other time"
 
   utter_ask_continue:
     - text: "Sorry I don't quite understand. Do you want to continue?"
@@ -79,6 +108,9 @@ responses:
             -Eat Healthy? {eat_healthy}\n
             -Today's Goal: {today_goal}\n"
 
+
+#forms:
+#  - initial_form
 forms:
   initial_form:
     name:
@@ -98,12 +130,17 @@ forms:
         entity: sleep_time
         intent: inform_sleep_time
     eat_healthy:
-      - type: from_entity
+      - type: from_intent
         entity: eat_healthy
+        value: True
         intent: affirm
+      - type: from_intent
+        entity: eat_healthy
+        value: False
+        intent: deny
     today_goal:
-      - type: from_entity
-        entity: today_goal
+      - type: from_text
+        # entity: today_goal
         intent: inform_today_goal
 
 session_config:

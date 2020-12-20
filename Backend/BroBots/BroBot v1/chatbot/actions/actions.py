@@ -1,27 +1,49 @@
-# This files contains your custom actions which can be used to run
-# custom Python code.
-#
-# See this guide on how to implement these action:
-# https://rasa.com/docs/rasa/custom-actions
+from typing import Any, Text, Dict, List, Union
+
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.forms import FormAction
 
 
-# This is a simple example for a custom action which utters "Hello World!"
+class InitialForm(FormAction):
 
-# from typing import Any, Text, Dict, List
-#
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
-#
-#
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message(text="Hello World!")
-#
-#         return []
+    def name(self):
+        return "initial_form"
+
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        return ["name", "age", "gender", "sleep_time", "eat_healthy", "today_goal"]
+
+    def submit(
+            self,
+            dispatcher: "CollectingDispatcher",
+            tracker: Tracker,
+            domain: Dict[Text, Any],
+    ) -> List[Dict]:
+        return []
+
+    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
+        return {
+            "name": [
+                self.from_entity(entity="name"),
+                # self.from_entity(intent="deny")
+            ],
+            "age": [
+                self.from_entity(entity="age"),
+                # self.from_entity(intent="deny"),
+            ],
+            "gender": [
+                self.from_entity(entity="gender"),
+            ],
+            "sleep_time": [
+                self.from_entity(entity="sleep_time"),
+            ],
+            "eat_healthy": [
+                self.from_intent(intent="affirm", value=True),
+                self.from_intent(intent="deny", value=False),
+            ],
+            "today_goal": [
+                self.from_entity(entity="today_goal"),
+                self.from_text(intent="inform_today_goal"),
+            ]
+        }

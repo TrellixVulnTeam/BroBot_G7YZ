@@ -11,3 +11,17 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+
+- rule: submit initial form
+  condition:
+    # Condition that form is active.
+    - active_loop: initial_form
+  steps:
+    # Form is deactivated
+    - action: initial_form
+    - active_loop: null
+    - action: utter_slot_values
+    - intent: thankyou
+    - action: utter_no_worries
+
