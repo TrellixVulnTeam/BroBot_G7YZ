@@ -16,6 +16,12 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - yo
+    - bro
+    - hi bro
+    - what's up
+    - hi bro what's up
+    - yo bro
 
 - intent: goodbye
   examples: |
@@ -39,6 +45,29 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - you are right.
+    - sure
+    - why not
+    - let's try
+    - ok
+    - okay
+    - yeah
+    - yep
+    - cool
+    - fine
+    - you bet
+    - great
+    - pretty good
+
+- intent: thankyou
+  examples: |
+    - ty
+    - thanks
+    - thankyou
+    - thankyou
+    - that was nice
+    - nice
+    - thats nice
 
 - intent: deny
   examples: |
@@ -49,6 +78,88 @@ nlu:
     - don't like that
     - no way
     - not really
+    - not okay
+    - some other time
+    - not today
+    - not right now
+    - no please
+    - please no
+    - none
+    - absolutely not
+    - not
+    - no thank you
+    - no thanks
+    - no I did not
+    - no I didn't
+    - not great
+    - nope
+    - could have been better
+
+- intent: inform_name
+  examples: |
+      - Im [Valeed](name)
+      - My name is [Ali](name)
+      - People call me [Ayesha](name)
+      - [Shaheer](name)
+      - [Armaghan](name) is my name.
+
+- intent: inform_gender
+  examples: |
+      - [Male](gender)
+      - [Female](gender)
+      - [M](gender)
+      - [F](gende)
+      - Not gonna say
+      - Prefer not to say
+
+- intent: inform_age
+  examples: |
+    - Im [18](age) years old.
+    - Im [34](age).
+    - [54](age) years.
+    - [17](age)
+
+- intent: inform_sleep_time
+  examples: |
+    - I slept for [8 hours](sleep_time)
+    - barely slept [an hour](sleep_time)
+    - I do not remember, maybe [2 hours](sleep_time)
+    - Only [30 minutes](sleep_time)
+    - I think about [12 hours](sleep_time)
+    - [2 hours](sleep_time)
+
+- intent: inform_today_goal
+  examples: |
+    - I want to [play hockey today](today_goal)
+    - gonna [go for a run](today_goal)
+    - I will [eat healthy today](today_goal)
+    - go [eat pizza](today_goal)
+    - [meet my friend](today_goal)
+    - probably [play football](today_goal)
+
+- intent: out_of_scope
+  examples: |
+    - that's not what I want to do
+    - wait stop
+    - you are no help
+    - this is no help
+    - I want to order a pizza
+    - I want to go play football
+    - Im done
+    - that's it
+    - go away
+    - don't do this
+    - stop it
+    - I don't like you
+    - let's do somethins else
+    - forget about it
+    - tell me the weather
+    - I dont wanna tell you
+    - nevermind
+    - I changed my mind
+
+
+
 
 - intent: mood_great
   examples: |
@@ -90,3 +201,14 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: ask_intro
+  examples: |
+    - who are you?
+    - what do you do?
+    - how can you help me?
+    - why should I use me?
+    - you don't seem interesting.
+
+- intent
+
