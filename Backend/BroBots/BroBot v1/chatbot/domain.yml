@@ -11,34 +11,12 @@ intents:
   - ask_intro
   - inform
   - out_of_scope
-
-slots:
-  name:
-    type: unfeaturized
-  age:
-    type: unfeaturized
-  gender:
-    type: unfeaturized
-  interests:
-    type: unfeaturized
-  interests_when_down:
-    type: unfeaturized
-  sleep_time:
-    type: unfeaturized
-  eat_healthy:
-    type: unfeaturized
-  today_goal:
-    type: unfeaturized
-
-entities:
-  - name
-  - age
-  - gender
-  - interests
-  - interests_when_down
-  - sleep_time
-  - eat_healthy
-  - today_goal
+  - thankyou
+  - inform_name
+  - inform_gender
+  - inform_age
+  - inform_sleep_time
+  - inform_today_goal
 
 
 responses:
@@ -102,7 +80,31 @@ responses:
             -Today's Goal: {today_goal}\n"
 
 forms:
-  - initial_form
+  initial_form:
+    name:
+      - type: from_entity
+        entity: name
+        intent: inform_name
+    gender:
+      - type: from_entity
+        entity: gender
+        intent: inform_gender
+    age:
+      - type: from_entity
+        entity: age
+        intent: inform_age
+    sleep_time:
+      - type: from_entity
+        entity: sleep_time
+        intent: inform_sleep_time
+    eat_healthy:
+      - type: from_entity
+        entity: eat_healthy
+        intent: affirm
+    today_goal:
+      - type: from_entity
+        entity: today_goal
+        intent: inform_today_goal
 
 session_config:
   session_expiration_time: 60
