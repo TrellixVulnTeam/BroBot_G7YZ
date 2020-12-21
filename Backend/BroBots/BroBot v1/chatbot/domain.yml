@@ -1,5 +1,6 @@
 version: "2.0"
-
+actions:
+  - action_get_recommendation_interest
 intents:
   - greet
   - goodbye
@@ -99,6 +100,12 @@ responses:
   utter_ask_continue:
     - text: "Sorry I don't quite understand. Do you want to continue?"
 
+  utter_happy_for_you:
+    - text: "Thats Great ! Happy To be of use"
+
+  utter_improve_recommendations:
+    - text: "You can improve Recommendations by Providing some insights to your interest by updating Preference in menu."
+
   utter_slot_values:
     - text: "Here are your details:\n
             -Name: {name}\n
@@ -107,7 +114,8 @@ responses:
             -Sleep: {sleep_time} hours\n
             -Eat Healthy? {eat_healthy}\n
             -Today's Goal: {today_goal}\n"
-
+#  utter_ask_for_interest:
+#    -text: "
 
 #forms:
 #  - initial_form

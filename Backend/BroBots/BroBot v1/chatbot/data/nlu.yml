@@ -198,6 +198,20 @@ nlu:
     - nevermind
     - I changed my mind
 
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ask_intro
+  examples: |
+    - who are you?
+    - what do you do?
+    - how can you help me?
+    - why should I use me?
+    - you don't seem interesting.
 
 - intent: mood_great
   examples: |
@@ -232,21 +246,6 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-
-- intent: ask_intro
-  examples: |
-    - who are you?
-    - what do you do?
-    - how can you help me?
-    - why should I use me?
-    - you don't seem interesting.
 
 
 
