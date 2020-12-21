@@ -7,6 +7,7 @@ from rasa_sdk.forms import FormAction
 from googlesearch import search
 from youtubesearchpython import SearchVideos
 from random import randrange
+import requests
 
 
 class InitialForm(FormAction):
@@ -104,4 +105,24 @@ class Recommendation(Action):
                   "music,videos]")
         dispatcher.utter_message("Here is something for you:\n" + link)
 
+        return []
+
+
+class ElizaResponse(Action):
+
+    def name(self) -> Text:
+        return "action_eliza_response"
+
+    def run(
+            self,
+            dispatcher,
+            tracker: Tracker,
+            domain: "DomainDict",
+    ) -> List[Dict[Text, Any]]:
+        url = '127.0.0.1:9010'
+        post_obj = {'input': tracker.latest_message['text']}
+
+        x = requests.post(url, data=post_obj)
+
+        dispatcher.utter_message(x.text + '\n')
         return []

@@ -253,8 +253,10 @@ class myHandler(BaseHTTPRequestHandler):
         logging.info("POST request,\nPath: %s\nHeaders:\n%s\n\nBody:\n%s\n",
                 str(self.path), str(self.headers), post_data.decode('utf-8'))
 
-        userText=""
-        response = self.eliza.respond(userText)
+        post_data = post_data.decode('utf-8')
+        key = post_data.split("=")[0]
+        value = post_data.split("=")[1]
+        response_ = self.eliza.respond(value)
         if response is None:
             # end conversation
 
@@ -264,15 +266,15 @@ class myHandler(BaseHTTPRequestHandler):
         #x # local rasa run
 
         self._set_response()
-        self.wfile.write("POST request for {}".format(self.path).encode('utf-8'))
+        self.wfile.write(response_.encode('utf-8'))
 
 
 class http_server:
-    def __init__(self, eliza):
+    def __init__(self, eliza, port):
         def handler(*args):
             myHandler(eliza, *args)
 
-        port = 8080
+        
         ip = ''
         server = HTTPServer((ip, port), handler)
         # logging.info('Starting httpd...\n')
@@ -284,14 +286,17 @@ class http_server:
         # logging.info('Stopping httpd...\n')
 
 
+def main():
+    eliza = Eliza()
+    eliza.load('doctor.txt')
+    server = http_server(eliza, 9010)
+
 class main:
     def __int__(self):
-        self.eliza = Eliza()
-        self.eliza.load('doctor.txt')
-        self.server = http_server(self.eliza)
+        
 
     # eliza.run()
 
 if __name__ == '__main__':
     logging.basicConfig()
-    m=main()
+    main()
