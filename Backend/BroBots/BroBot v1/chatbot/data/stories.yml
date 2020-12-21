@@ -2,12 +2,20 @@ version: "2.0"
 
 stories:
 
+-story: greet story
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - checkpoint: greet_done
+
+
 - story: happy path
   steps:
   - intent: greet
   - action: utter_greet
   - intent: mood_great
   - action: utter_happy
+  - checkpoint: get_recommendation
 
 - story: sad path 1
   steps:
@@ -80,3 +88,30 @@ stories:
     - intent: deny
     - action: utter_no_worries
     - action: utter_someother_time
+
+#- story: get user interest happy path
+#  steps:
+#    - checkpoint: get_user_interest_checkpoint
+#    - bot: "Will you like to give us some insights to your interests?"
+#    - intent: affirm
+#    - action: action_getInterest
+
+
+- story: get recommendation using interest happy path
+  steps:
+    - checkpoint: get_recommendation
+    - action: action_get_recommendation_interest
+    - or:
+        - intent: thankyou
+        - intent: mood_great
+    - action: utter_happy_for_you
+    - action: utter_improve_recommendations
+
+- story: get recommendation using interest unhappy path
+  steps:
+    - checkpoint: get_recommendation
+    - action: action_get_recommendation_interest
+    - or:
+        - intent: deny
+    - bot: "Sorry About That."
+    - action: utter_improve_recommendations
