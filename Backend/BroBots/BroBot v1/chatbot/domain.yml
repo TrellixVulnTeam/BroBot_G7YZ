@@ -17,6 +17,12 @@ intents:
   - inform_age
   - inform_sleep_time
   - inform_today_goal
+  - mood_anger
+  - mood_surprise
+  - mood_fear
+  - mood_joy
+  - mood_sadness
+  - mood_love
 
 slots:
   name:
@@ -108,7 +114,42 @@ responses:
             -Eat Healthy? {eat_healthy}\n
             -Today's Goal: {today_goal}\n"
 
+  utter_improve_recommendations:
+    - text: "You can improve Recommendations by Providing some insights to your interest by updating Preference in menu."
 
+  utter_mood_angry:
+    - text: "You seem a little upset about something."
+    - text: "Whatever made you feel this way would go away soon."
+    - text: "Don't push yourself too hard, you got this."
+
+  utter_mood_sadness:
+    - text: "Sadness flies away on the wing of time. You got this."
+    - text: "Sadness is but a wall between two gardens. I hope you feel better."
+    - text: "Any fool can be happy. It takes a man with real heart to make beauty out of the stuff that makes us weep. Hope you feel better."
+
+  utter_mood_joy:
+    - text: "Im so glad to hear you like this. Hope you have a great day."
+    - text: "Great, carry on!"
+    - text: "If you carry joy in your heart, you can heal any moment. Have a great day."
+
+  utter_mood_fear:
+    - text: "Whatever is bothering you will soon go away. It is just a matter of time."
+    - text: "Each of us must confront our own fears, must come face to face with them. How we handle our fears will determine where we go with the rest of our lives. To experience adventure or to be limited by the fear of it."
+    - text: "Fear is the path to the Dark Side. Fear leads to anger, anger leads to hate, hate leads to suffering. Hope you feel better."
+    - text: "The brave man is not he who does not feel afraid, but he who conquers that fear!"
+
+  utter_mood_surprise:
+    - text: "Wonder is the beginning of wisdom!"
+    - text: "Almost the entire world is asleep. Those who are awake live in constant amazement! :))"
+    - text: "Each day, each moment\n
+             is a step into the unknown.\n
+             How can we feel anything\n
+             but amazement?"
+
+  utter_mood_love:
+    - text: "Being deeply loved by someone(or even yourself) gives you strength, while loving someone deeply gives you courage."
+    - text: "I think you are quite lucky to feel so loved."
+    - text: "Life without love is like a tree without blossoms or fruit. The best thing to hold onto in life is each other. 'Tis better to have loved and lost than never to have loved at all. Hope such people stay forever in your life"
 #forms:
 #  - initial_form
 forms:
@@ -142,6 +183,9 @@ forms:
       - type: from_text
         # entity: today_goal
         intent: inform_today_goal
+
+actions:
+  - action_get_recommendation_interest
 
 session_config:
   session_expiration_time: 60
