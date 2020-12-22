@@ -233,9 +233,10 @@ class Eliza:
 
 class myHandler(BaseHTTPRequestHandler):
 
-    def __init__(self, eliza, *args):
-        self.eliza = eliza
-        BaseHTTPRequestHandler.__init__(self, *args)
+    eliza=None
+    #def __init__(self, eliza, *args):
+    #    self.eliza = eliza
+    #    BaseHTTPRequestHandler.__init__(self, *args)
 
     def _set_response(self):
         self.send_response(200)
@@ -256,8 +257,10 @@ class myHandler(BaseHTTPRequestHandler):
         post_data = post_data.decode('utf-8')
         key = post_data.split("=")[0]
         value = post_data.split("=")[1]
+        value = value.replace('+', ' ')
+        print(value)
         response_ = self.eliza.respond(value)
-        if response is None:
+        #if response is None:
             # end conversation
 
         #url = 'https://www.w3schools.com/python/demopage.php'
@@ -271,12 +274,12 @@ class myHandler(BaseHTTPRequestHandler):
 
 class http_server:
     def __init__(self, eliza, port):
-        def handler(*args):
-            myHandler(eliza, *args)
+        # def handler(*args):
+        #     myHandler(eliza, *args)
 
-        
+        myHandler.eliza=eliza        
         ip = ''
-        server = HTTPServer((ip, port), handler)
+        server = HTTPServer((ip, port), myHandler)
         # logging.info('Starting httpd...\n')
         try:
             server.serve_forever()
@@ -291,11 +294,7 @@ def main():
     eliza.load('doctor.txt')
     server = http_server(eliza, 9010)
 
-class main:
-    def __int__(self):
-        
 
-    # eliza.run()
 
 if __name__ == '__main__':
     logging.basicConfig()

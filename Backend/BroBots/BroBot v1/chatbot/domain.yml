@@ -68,6 +68,12 @@ responses:
   utter_goodbye:
   - text: "Bye"
 
+  utter_see_you_later:
+    - text: "Ok see you later! :)"
+    - text: "Good Bye, have a nice day!"
+    - text: "It was nice talking to you. Ttyl! :)"
+    - text: "See you soon"
+
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
@@ -109,8 +115,8 @@ responses:
     - text: "Here are your details:\n
             -Name: {name}\n
             -Age: {age}\n
-            -Gender: {gender}
-            -Sleep: {sleep_time} hours\n
+            -Gender: {gender}\n
+            -Sleep: {sleep_time} \n
             -Eat Healthy? {eat_healthy}\n
             -Today's Goal: {today_goal}\n"
 
@@ -186,6 +192,7 @@ forms:
 
 actions:
   - action_get_recommendation_interest
+  - action_eliza_response
 
 session_config:
   session_expiration_time: 60

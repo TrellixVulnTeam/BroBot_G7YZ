@@ -2,15 +2,20 @@ version: "2.0"
 
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Say goodbye anytime the user says goodbye and give recommendations
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+    - intent: goodbye
+    - action: action_get_recommendation_interest
+    - action: utter_see_you_later
+
+
+- rule: Say 'I am a bot' anytime the user challenges or asks intro
+  steps:
+    - or:
+      - intent: bot_challenge
+      - intent: ask_intro
+    - action: utter_intro
 
 
 - rule: submit initial form
@@ -25,3 +30,20 @@ rules:
     - intent: thankyou
     - action: utter_no_worries
 
+#- rule: when to talk to eliza
+#  condition:
+#    - active_loop: null
+#
+#  steps:
+#    - or:
+#      - intent: mood_anger
+#      - intent: mood_sadness
+#      - intent: mood_joy
+#      - intent: mood_love
+#      - intent: mood_fear
+#      - intent: mood_surprise
+#      - intent: affirm
+#      - intent: deny
+#      - intent: out_of_scope
+#      - intent: mood_great
+#    - action: action_eliza_response

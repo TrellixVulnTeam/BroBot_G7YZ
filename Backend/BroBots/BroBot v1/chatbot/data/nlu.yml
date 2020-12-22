@@ -25,7 +25,6 @@ nlu:
 
 - intent: goodbye
   examples: |
-    - good afternoon
     - cu
     - good by
     - cee you later
@@ -36,6 +35,14 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - I have to go
+    - ok talk to you later
+    - ttyl
+    - I have other things to do
+    - I need to go
+    - I cant talk right now
+    - byebye
+    - byby
 
 - intent: affirm
   examples: |
@@ -64,10 +71,16 @@ nlu:
     - ty
     - thanks
     - thankyou
-    - thankyou
+    - thank you
     - that was nice
     - nice
     - thats nice
+    - tnx
+    - thnks
+    - thanx
+    - thankx
+    - im grateful
+    - you are nice
 
 - intent: deny
   examples: |
@@ -228,7 +241,7 @@ nlu:
     - who are you?
     - what do you do?
     - how can you help me?
-    - why should I use me?
+    - why should I use you?
     - you don't seem interesting.
 
 - intent: mood_anger

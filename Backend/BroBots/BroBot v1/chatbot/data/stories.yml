@@ -1,40 +1,9 @@
 version: "2.0"
 
+
 stories:
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
-
-- story: intro bot
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: ask_intro
-  - action: utter_intro
 
 - story: initial form happy path
   steps:
@@ -81,81 +50,87 @@ stories:
     - action: utter_no_worries
     - action: utter_someother_time
 
-
-- story: user mood angry
+- story: when to talk to eliza
   steps:
-    - intent: mood_anger
-    - action: utter_mood_angry
-    - action: action_get_recommendation_interest
-    - checkpoint: recommendation_complete
-
-
-- story: user mood love happy path
-  steps:
-    - intent: mood_love
-    - action: utter_mood_love
-    - action: action_get_recommendation_interest
-    - checkpoint: recommendation_complete
-
-
-- story: user mood fear happy path
-  steps:
-    - intent: mood_fear
-    - action: utter_mood_fear
-    - action: action_get_recommendation_interest
-    - checkpoint: recommendation_complete
-
-- story: user mood surprise happy path
-  steps:
-    - intent: mood_surprise
-    - action: utter_mood_surprise
-    - action: action_get_recommendation_interest
-    - checkpoint: recommendation_complete
-
-- story: user mood sadness happy path
-  steps:
-    - intent: mood_sadness
-    - action: utter_mood_sadness
-    - action: action_get_recommendation_interest
-    - checkpoint: recommendation_complete
-
-- story: user mood joy happy path
-  steps:
-    - intent: mood_joy
-    - action: utter_mood_joy
-    - action: action_get_recommendation_interest
-    - checkpoint: recommendation_complete
-
-
-- story: recommendation happy path
-  steps:
-    - checkpoint: recommendation_complete
-    - action: utter_did_that_help
     - or:
-      - intent: thankyou
-      - intent: mood_great
+      - intent: mood_anger
+      - intent: mood_sadness
+      - intent: mood_joy
+      - intent: mood_love
+      - intent: mood_fear
+      - intent: mood_surprise
       - intent: affirm
-    - bot: "I'm happy for you"
-    - action: utter_improve_recommendations
+      - intent: deny
+      - intent: out_of_scope
+      - intent: mood_great
+      - intent: thankyou
+    - action: action_eliza_response
 
-
-- story: recommendation unhappy path
-  steps:
-    - checkpoint: recommendation_complete
-    - action: utter_did_that_help
-    - or:
-        - intent: deny
-    - bot: "Sorry About That."
-    - action: utter_improve_recommendations
-
-
-#- story: eliza
+#- story: user mood angry
 #  steps:
-#    - intent: mood_happy
-#    - action: action_DB
-#    - action: action_eliza
-
-#- story: bye
-#  steps:
-#    - intent: bye
+#    - intent: mood_anger
+#    - action: utter_mood_angry
 #    - action: action_get_recommendation_interest
+#    - checkpoint: recommendation_complete
+#
+#
+#- story: user mood love happy path
+#  steps:
+#    - intent: mood_love
+#    - action: utter_mood_love
+#    - action: action_get_recommendation_interest
+#    - checkpoint: recommendation_complete
+#
+#
+#- story: user mood fear happy path
+#  steps:
+#    - intent: mood_fear
+#    - action: utter_mood_fear
+#    - action: action_get_recommendation_interest
+#    - checkpoint: recommendation_complete
+#
+#- story: user mood surprise happy path
+#  steps:
+#    - intent: mood_surprise
+#    - action: utter_mood_surprise
+#    - action: action_get_recommendation_interest
+#    - checkpoint: recommendation_complete
+#
+#- story: user mood sadness happy path
+#  steps:
+#    - intent: mood_sadness
+#    - action: utter_mood_sadness
+#    - action: action_get_recommendation_interest
+#    - checkpoint: recommendation_complete
+#
+#- story: user mood joy happy path
+#  steps:
+#    - intent: mood_joy
+#    - action: utter_mood_joy
+#    - action: action_get_recommendation_interest
+#    - checkpoint: recommendation_complete
+#
+#
+#- story: recommendation happy path
+#  steps:
+#    - checkpoint: recommendation_complete
+#    - action: utter_did_that_help
+#    - or:
+#      - intent: thankyou
+#      - intent: mood_great
+#      - intent: affirm
+#    - bot: "I'm happy for you"
+#    - action: utter_improve_recommendations
+#
+#
+#- story: recommendation unhappy path
+#  steps:
+#    - checkpoint: recommendation_complete
+#    - action: utter_did_that_help
+#    - or:
+#        - intent: deny
+#    - bot: "Sorry About That."
+#    - action: utter_improve_recommendations
+
+
+
