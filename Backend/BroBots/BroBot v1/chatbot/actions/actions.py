@@ -78,11 +78,11 @@ class Recommendation(Action):
     ) -> List[Dict[Text, Any]]:
 
         intent_recommendation = {
-            "mood_love": ["music", "romance"],
+            "mood_love": ["article", "Why to be grateful in life"],
             "mood_anger": ["music", "peaceful"],
             "mood_joy": ["article", "Data Science"],
             "mood_fear": ["videos", "motivation"],
-            "mood_surprise": ["videos", "funny"],
+            "mood_surprise": ["article", "funny"],
             "mood_sadness": ["videos", "Things to be happy about"],
         }
         # intent_confidence = tracker.latest_message['latest_message']['intent']['confidence']

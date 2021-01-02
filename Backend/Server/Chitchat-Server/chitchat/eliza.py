@@ -7,9 +7,11 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 # import logging
 import requests
 
-# Fix Python2/Python3 incompatibility
-try: input = raw_input
-except NameError: pass
+
+try:
+    input = raw_input
+except NameError:
+    pass
 
 log = logging.getLogger(__name__)
 
@@ -230,11 +232,10 @@ class Eliza:
         print(self.final())
 
 
-
 class myHandler(BaseHTTPRequestHandler):
 
-    eliza=None
-    #def __init__(self, eliza, *args):
+    eliza = None
+    # def __init__(self, eliza, *args):
     #    self.eliza = eliza
     #    BaseHTTPRequestHandler.__init__(self, *args)
 
@@ -244,15 +245,19 @@ class myHandler(BaseHTTPRequestHandler):
         self.end_headers()
 
     def do_GET(self):
-        logging.info("GET request,\nPath: %s\nHeaders:\n%s\n", str(self.path), str(self.headers))
+        logging.info("GET request,\nPath: %s\nHeaders:\n%s\n",
+                     str(self.path), str(self.headers))
         self._set_response()
-        self.wfile.write("GET request for {}".format(self.path).encode('utf-8'))
+        self.wfile.write("GET request for {}".format(
+            self.path).encode('utf-8'))
 
     def do_POST(self):
-        content_length = int(self.headers['Content-Length']) # <--- Gets the size of data
-        post_data = self.rfile.read(content_length) # <--- Gets the data itself
+        # <--- Gets the size of data
+        content_length = int(self.headers['Content-Length'])
+        # <--- Gets the data itself
+        post_data = self.rfile.read(content_length)
         logging.info("POST request,\nPath: %s\nHeaders:\n%s\n\nBody:\n%s\n",
-                str(self.path), str(self.headers), post_data.decode('utf-8'))
+                     str(self.path), str(self.headers), post_data.decode('utf-8'))
 
         post_data = post_data.decode('utf-8')
         key = post_data.split("=")[0]
@@ -260,13 +265,6 @@ class myHandler(BaseHTTPRequestHandler):
         value = value.replace('+', ' ')
         print(value)
         response_ = self.eliza.respond(value)
-        #if response is None:
-            # end conversation
-
-        #url = 'https://www.w3schools.com/python/demopage.php'
-        #myobj = {'somekey': 'somevalue'}
-        #x = requests.post(url, data = myobj)
-        #x # local rasa run
 
         self._set_response()
         self.wfile.write(response_.encode('utf-8'))
@@ -274,26 +272,22 @@ class myHandler(BaseHTTPRequestHandler):
 
 class http_server:
     def __init__(self, eliza, port):
-        # def handler(*args):
-        #     myHandler(eliza, *args)
 
-        myHandler.eliza=eliza        
+        myHandler.eliza = eliza
         ip = ''
         server = HTTPServer((ip, port), myHandler)
-        # logging.info('Starting httpd...\n')
+
         try:
             server.serve_forever()
         except KeyboardInterrupt:
             pass
         server.server_close()
-        # logging.info('Stopping httpd...\n')
 
 
 def main():
     eliza = Eliza()
     eliza.load('doctor.txt')
     server = http_server(eliza, 9010)
-
 
 
 if __name__ == '__main__':

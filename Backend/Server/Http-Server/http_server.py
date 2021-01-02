@@ -5,65 +5,60 @@ import logging
 import requests
 import json
 
+
 class S(BaseHTTPRequestHandler):
 
-        
     def _set_response(self):
         self.send_response(200)
         self.send_header('Content-type', 'text/html')
         self.end_headers()
 
     def do_GET(self):
-        logging.info("GET request,\nPath: %s\nHeaders:\n%s\n", str(self.path), str(self.headers))
+        logging.info("GET request,\nPath: %s\nHeaders:\n%s\n",
+                     str(self.path), str(self.headers))
         self._set_response()
         self.wfile.write("GET Request".encode('utf-8'))
 
     def do_POST(self):
-        content_length = int(self.headers['Content-Length']) # <--- Gets the size of data
-        post_data = self.rfile.read(content_length) # <--- Gets the data itself
+        # <--- Gets the size of data
+        content_length = int(self.headers['Content-Length'])
+        # <--- Gets the data itself
+        post_data = self.rfile.read(content_length)
         logging.info("POST request,\nPath: %s\nHeaders:\n%s\n\nBody:\n%s\n",
-                str(self.path), str(self.headers), post_data.decode('utf-8'))
+                     str(self.path), str(self.headers), post_data.decode('utf-8'))
         url = "http://localhost:5005/webhooks/rest/webhook"
-        #myobj = {"sender": "test_user", "message": "Hi there!" }
-        
+
         post_data = post_data.decode('utf-8')
-       
-        print('SENDING REQUEST TO RASA')
-        post_data = post_data.replace('\"','')
-        post_data = post_data.replace('}' , '')
+
+        post_data = post_data.replace('\"', '')
+        post_data = post_data.replace('}', '')
         sender = post_data.split(',')[0].split(':')[1]
         message = post_data.split(',')[1].split(':')[1]
-        
-        print("sender", sender)
-        print("message", message)
-        
+
         obj = {
-        "sender": sender, 
-        "message": message,}
-        x = requests.post(url, data = json.dumps(obj))
-        print("SENDING RESPONSE ...")
-        
+            "sender": sender,
+            "message": message, }
+        x = requests.post(url, data=json.dumps(obj))
+
         _res = x.json()
         _res = _res[0]
-        print(_res)
         self._set_response()
-        #_res = {"response": "post Working"}
-        #self.wfile.write("POST working".encode('utf-8'))
-        #self._set_headers()
-        
+
         self.wfile.write(json.dumps(_res).encode('utf-8'))
+
 
 def run(server_class=HTTPServer, handler_class=S, port=8080):
     logging.basicConfig(level=logging.INFO)
     server_address = ('192.168.10.7', port)
     httpd = server_class(server_address, handler_class)
-    logging.info('Starting httpd...\n')
+    logging.info('Starting http...\n')
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:
         pass
     httpd.server_close()
-    logging.info('Stopping httpd...\n')
+    logging.info('Stopping http...\n')
+
 
 if __name__ == '__main__':
     from sys import argv
