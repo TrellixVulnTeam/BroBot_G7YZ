@@ -1,4 +1,4 @@
-BroBot is a Final Year Project for Fall 2020. It's an interactive chatbot able to have somewhat contextual
+BroBot is our Final Year Project for Fall 2020. It's an interactive chatbot able to have somewhat contextual
 conversations with the user and store information using forms and then give recommendations based on preferences
 and mood.
 
