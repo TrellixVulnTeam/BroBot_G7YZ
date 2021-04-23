@@ -1,0 +1,64 @@
+version: "2.0"
+
+stories:
+- story: greet simple path
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- story: greet with affirm
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: affirm
+    - action: utter_ask_general
+
+- story: greet with deny
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: deny
+    - action: utter_ask_help
+
+- story: goodbye simple path
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+
+- story: thankyou simple path
+  steps:
+    - intent: thankyou
+    - action: utter_welcome
+
+
+- story: change conv scope affirm
+  steps:
+    - intent: change_of_scope
+    - action: utter_ask_stop
+    - intent: affirm
+    - action: utter_goodbye
+
+- story: change conv scope deny
+  steps:
+    - intent: change_of_scope
+    - action: utter_ask_stop
+    - intent: deny
+    - action: utter_ask_general
+
+- story: user needs therapist
+  steps:
+    - intent: need_therapist
+    - action: action_response_from_therapist
+
+- story: bot challenge simple path
+  steps:
+    - intent: bot_challenge
+    - action: utter_introduction
+
+
+- story: asking intro simple path
+  steps:
+    - intent: ask_intro
+    - action: utter_introduction
+

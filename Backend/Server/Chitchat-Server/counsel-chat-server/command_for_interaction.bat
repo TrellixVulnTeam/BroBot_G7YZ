@@ -1,0 +1,1 @@
+python interact.py --model_checkpoint .\models\counselchat-convai\ --temperature 0.7 --max_length 100 --max_history 3 --dataset_path .\data\counsel_chat_250-tokens_full.json

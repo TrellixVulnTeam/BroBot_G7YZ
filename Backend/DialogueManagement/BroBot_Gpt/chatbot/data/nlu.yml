@@ -1,0 +1,1742 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - yo
+    - bro
+    - hi bro
+    - what's up
+    - hi bro what's up
+    - yo bro
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - I have to go
+    - ok talk to you later
+    - ttyl
+    - I have other things to do
+    - I need to go
+    - I cant talk right now
+    - byebye
+    - byby
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - you are right.
+    - sure
+    - why not
+    - let's try
+    - ok
+    - okay
+    - yeah
+    - yep
+    - cool
+    - fine
+    - you bet
+    - great
+    - pretty good
+
+- intent: thankyou
+  examples: |
+    - ty
+    - thanks
+    - thankyou
+    - thank you
+    - that was nice
+    - nice
+    - thats nice
+    - tnx
+    - thnks
+    - thanx
+    - thankx
+    - im grateful
+    - you are nice
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - not okay
+    - some other time
+    - not today
+    - not right now
+    - no please
+    - please no
+    - none
+    - absolutely not
+    - not
+    - no thank you
+    - no thanks
+    - no I did not
+    - no I didn't
+    - not great
+    - nope
+    - could have been better
+- intent: change_of_scope
+  examples: |
+    - that's not what I want to do
+    - wait stop
+    - you are no help
+    - this is no help
+    - I want to order a pizza
+    - I want to go play football
+    - Im done
+    - that's it
+    - go away
+    - don't do this
+    - stop it
+    - I don't like you
+    - let's do somethins else
+    - forget about it
+    - tell me the weather
+    - I dont wanna tell you
+    - nevermind
+    - I changed my mind
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ask_intro
+  examples: |
+    - who are you?
+    - what do you do?
+    - how can you help me?
+    - why should I use you?
+    - you don't seem interesting.
+
+- intent: need_therapist
+  examples: |
+    - Can I change my feeling of being worthless to everyone?
+    - Do I have too many issues for counseling?
+    - How do I find out the cause of my depression and anxiety?
+    - How do I overcome my anxierty and depression?
+    - Why am I upset or down every day even when nothing is going on?
+    - How can I deal with depression stemming from chronic pain?
+    - How can I get counseling if my primary care physician won't help?
+    - Why am I experiencing dfficulty maintaining an erection?
+    - How do depression and PMS symptoms contribute to one another and what can I do about it?
+    - Why does it feel as if self-harm is an addiction?
+    - My apartment manager won't let me keep an emotional support dog
+    - How can I get my husband to listen to my needs and talk to me?
+    - Why do I crave depression?
+    - How can I best fight the winter blues?
+    - How do I get back on my feet while going through a bad divorce?
+    - How can I find myself again?
+    - Is wishing I wasn't born a sign of something deeper?
+    - I'm seriously unhappy with everything in my life but I know I don't have any reason to feel this way
+    - How can I help my girlfriend?
+    - Is it normal to take a parent role and feel so hurt and broken as a teenager?
+    - Why do I feel like I'm nothing more than a wife and mom?
+    - Is there anything I can do about my depression and anxiety?
+    - Why do I feel like I don't belong anywhere?
+    - Does my friend have depression?
+    - I completely lost myself—how can I find myself again?
+    - I've been feeling sadness
+    - How do I talk about my feelings of depression, and to who do I talk to?
+    - How can I stop feeling empty?
+    - Is self-diagnosing okay?
+    - How do I make new friends?
+    - My family can't stand me
+    - I have long spurts of depression, anxiety, and need change constantly—why?
+    - I'm very depressed?
+    - How would I know if I was depressed?
+    - My family says I have depression
+    - I think my friend might have depression
+    - Is my moodiness just a phase or do I need help?
+    - How do I know if I have depression?
+    - How do I help my 20 year old boyfriend who says he hates his life?
+    - I feel like my mother doesn't support me
+    - Why do I feel sad all the time?
+    - is it normal not to feel empathy?
+    - How can I deal with my depression?
+    - Can i learn to be happy alone?
+    - How do I make myself happy without someone who made me happy?
+    - Is this depression?
+    - How can I get people to listen?
+    - How do I stop feeling empty?
+    - How do I deal with parental figures who have hurt me?
+    - My parents are getting a divorce and I feel depressed
+    - I need help coping with depression as a result of stress
+    - I feel like my existence is meaningless
+    - How can I help my husband after a suicide attempt?
+    - Why do I feel worthless and tired?
+    - How can you get back to my old self?
+    - How do I tell my parents that I'm depressed and need help?
+    - What can I do about my depression and anxiety after trying so many things?
+    - Why do I feel like I will never have a good career/amount to anything financially?
+    - My husband wants a divorce after I was diagnosed with severe depression
+    - I'm a mess physically, mentally, emotionally, and spiritually
+    - My husband makes me uncomfortable about sex
+    - If I am trying to stop self-harming and I seek help, will I need to be put in an inpatient setting?
+    - Do I have anxiety?
+    - How can I take care of my depression from a breakup?
+    - How do I tell my parents that I think I have some mental problems?
+    - How can I stop thinking so negatively about myself?
+    - How do I stop feeling so awful?
+    - How can I be happy as a stay-at-home mom?
+    - How do I balance school and life?
+    - How do I move past my depression from being separated from the military?
+    - How do I overcome my depression?
+    - What should I do when my parents won't let me see a therapist?
+    - How can I resist the urge to cut?
+    - Why am I so sad?
+    - Why can't I laugh anymore?
+    - Is it possible that I have depression?
+    - How can I cope with depression?
+    - How do I get rid of depression?
+    - Is my depression sabotaging my job search?
+    - How can I get back to being the person I truly am?
+    - How can I bring up my possible depression to my parents?
+    - I feel like my life is pointless
+    - How can I manage my anxiety and depression so I can feel normal again?
+    - Might I have depression?
+    - How can I manage my anxiety?
+    - Why do I feel so lonely when I have friends and attention?
+    - How can I control my anxiety?
+    - I am 20 and miserable
+    - Why have I been feeling empty lately?
+    - How can I deal with my posttraumatic stress disorder?
+    - How can I get over my posttraumatic stress disorder without my parents knowing about it?
+    - How can I get over my depression and grief?
+    - How do I get to know myself?
+    - How do I get back to my fun, happy self again?
+    - How can I love myself?
+    - I feel guilty because I didn't say no to a guy's advances
+    - How do I cope with bad thoughts?
+    - How can I feel so empty even though I'm only in my early teens?
+    - I think I have anxiety and depression. It has manifested an extreme distrust for others
+    - I have voices in my head
+    - I'm depressed and unable to connect with people after my breakup
+    - I get so angry that I want to explode
+    - I need help with my severe claustrophobia, motorphobia, and anxiety
+    - What can I do if I need to talk to someone but I have no money?
+    - How do I learn to feel emotion?
+    - How can I help my daughter with her severe depression and her obsessive form of thinking?
+    - I'm depressed because my mother kicked me out after having a child
+    - Should I go back on my medicine?
+    - How can I be happy again?
+    - I always feel depressed
+    - Does my fiancée need a service dog?
+    - I'm overwhelmed and depressed
+    - I'm studying abroad, and I'm depressed
+    - Relationships cause me anxiety and nausea
+    - My ex-boyfriend is with someone new, and it hurts
+    - I'm scared to go to a doctor or take anti-depressants
+    - What can I do when I can’t stand being alone?
+    - How do I fight inner loneliness from depression and a severe anxiety disorder?
+    - I'm depressed because my wife is divorcing me and I haven't seen my child in a while
+    - How can someone like me be happy?
+    - I don't believe in myself anymore
+    - I feel really down all the time
+    - Is it possible to get PTSD from being very depressed?
+    - I hate talking to people much less strangers
+    - I had a baby about 2 months ago and I really haven't been feeling myself
+    - I get depressed whenever anyone I care about is too busy to be with me. What do I do?
+    - How do I get over a slump?
+    - How do I get over anxiety, depression, and isolation?
+    - How do I deal with depression?
+    - I'm going through depression right now and my relationship is suffering
+    - I feel really uncomfortable around other people
+    - Thoughts of afterlife causes anxiety
+    - How do I shake self-doubt about sex?
+    - I keep on changing my life when things get tough
+    - I always fear that people are judging me
+    - What are the best ways to reduce anxiety?
+    - How do I get over imposter syndrome?
+    - Is it normal to go into therapy feeling nervous?
+    - I don't want to keep going back and forth between my parents' houses
+    - Can anxiety make me think I heard something about me?
+    - How can I wake up without having an anxiety attack?
+    - How do I cope with separation anxiety while boyfriend is out of town?
+    - How can I atone for being cowardly?
+    - How can I deal with this anxiety that keeps me up all night?
+    - How can I learn to not shut down and say what's wrong with me?
+    - I'm worried about my new job
+    - How can I learn to be content and at peace?
+    - Is there anything I can do to make my anxiety go away?
+    - I have difficulty with communication
+    - Is it normal to cry during therapy?
+    - I'm not sure if I have social anxiety disorder
+    - When I'm around children I get this intense feeling of paranoia and fear
+    - Do I text, call, or make contact first, the same day of the morning I left his house?
+    - Why do I feel anxious and uncomfortable at parties or big social situations?
+    - How can I be less afraid of people?
+    - I want to feel more comfortable around people
+    - Do I have some type of anxiety?
+    - How can I get over my fear of public embarrassment?
+    - How to stop worrying in a long distance relationship?
+    - How is it that I fear going to sleep?
+    - How can I take my emotional support animal to school?
+    - How do I handle my extreme paranoia?
+    - Why am I scared to touch a girl?
+    - I don't like going outside anymore
+    - Why do I find pleasure in thinking about killing?
+    - How can I be less stressed out?
+    - I feel burned out
+    - Overcoming fears
+    - How can I make the voices stop?
+    - How can I help myself and change my behavior?
+    - How do I open things up with a therapist without fearing judgment and condescension?
+    - How can I be less afraid of rape?
+    - How do I deal with all of my disorders?
+    - Why do I feel like I’m watching my life from a window?
+    - Why am I sick to my stomach when I stand up?
+    - How can I convince my mother I have anxiety and panic attacks?
+    - How can I talk to my psychologist about upping my dose of Xanax?
+    - How can I get over my fear of accidental pregnancy to have sex again?
+    - What can I do when I feel like my life is out of control?
+    - Why do I always feel anxious?
+    - What should I do about my stress before track meets?
+    - How do I get over my anxiety of talking to new people?
+    - Why do I always feel like I'm being watched?
+    - How can I stop worrying much?
+    - Why is it so hard for me to talk publicly?
+    - How do I stop my nightmares?
+    - I am paranoid that my boyfriend hiding something from me
+    - I'm scared because my boyfriend is interested in BDSM
+    - What do I do when I have anxiety attacks?
+    - How can I avoid becoming wrapped up in family issues and control my anxiety about them?
+    - Why am I so anxious in social situations?
+    - I've been having the same dream since I was a child
+    - If I'm not with my boyfriend, I have emotional breakdowns
+    - Why am I all of a sudden having issues communicating with the guy I’m dating?
+    - How can I get over social anxiety?
+    - I feel insecure, on edge, and drink too much
+    - Am I somehow stressing myself out?
+    - How can I deal with my paranoia?
+    - Do I have social anxiety?
+    - How do I get over my fears of dying?
+    - Why do I throw all my stuff away?
+    - I'm worried that there's something wrong with the guy I love
+    - Why am I not as comfortable around my boyfriend anymore?
+    - How can I be less anxious when dealing with my toddler?
+    - How can I deal with flashbacks of trauma?
+    - I'm worried that I will be single forever
+    - How do I become more confident and face social situations?
+    - Sleeping, Anger and Anxiety
+    - I have come to the realization that my boyfriend and I want different things
+    - How do I know if I have social anxiety?
+    - I always feel the need to tell people everything
+    - Could a rape that happened years ago be the cause of my anxiety?
+    - How do I become less anxious in conversations?
+    - I am fearful of social situations and avoiding people all together
+    - How can I slow down and enjoy life?
+    - What can I do if my parents refuse to acknowledge my anxiety and self-confidence issues?
+    - I'm experiencing panic attacks when I'm physically separated from my girlfriend
+    - Can I control anxiety without medication?
+    - I think my daughter is stressing too much
+    - Should I feel guilty if my adult daughter cannot afford to go on a family vacation?
+    - I get verbally abused everyday by my parents in front of my child and I cannot take it anymore
+    - If my kids come back from their dad's and act like they are afraid they will get hit, should I be worried about him abusing them?
+    - My fiancé's ex-husband shows up unannounced
+    - Does my daughter have a mental disability?
+    - My daughter isn't acting her age
+    - How should I handle the child I had with my ex-wife?
+    - How do I discipline a child with autism?
+    - How can I help my son succeed in life when he refuses it?
+    - I lied to my mom, then felt bad and told her the truth
+    - I don't know how to communicate with my adult daughter
+    - I don't know what to do about my son's lying
+    - I'm concerned about my 12 year old daughter
+    - Is it normal to dislike one child?
+    - Is it ok ayto talk with my grown children about spending time with their children?
+    - How do I kick my stepdaughter out of our house because she isn't honoring boundaries set for her?
+    - Is screaming and cussing at your child considered emotional abuse?
+    - How do I address my nephew's sexual behavior?
+    - How do I help my 5 year old from horrible tantrums caused by a bully at school?
+    - I feel stuck in life. What can I do?
+    - What do I do if my 7 year old says she want to kill herself?
+    - What are the long term effects of losing one's adopted mother?
+    - Is it healthy to embarrass a child as punishment?
+    - My mother is trying to control my life and I don't know what to do
+    - What can I do about my dad?
+    - How do I tell one parent I want to live with the other one?
+    - What can I do about my children blaming me for their addictions?
+    - I want help with how to deal with my abused daughter
+    - How can I deal with my daughter's rebellious behavior?
+    - My toddler wants her daddy to die when she's mad at him
+    - Should my step-daughters be told that their step-father has a child pornography addiction?
+    - My daughter won't stop stealing and lying
+    - If parents are divorced, is it acceptable for a counselor to allow an ex-spouse to be present during a child’s session?
+    - How should we punish our son for peeing his pants because of laziness?
+    - My son plays alone at recess
+    - How can I improve my relationship with my daughter?
+    - Our grandson wants to talk to his estranged mom
+    - My daughter calls me crazy, and I’m not sure how to handle that
+    - I feel like there is a wedge between my daughter and I
+    - My brother's ex-girlfriend doesn't want her son to see us anymore
+    - My mentally-ill mother-in-law wants to babysit
+    - Should I take my daughter to therapy?
+    - I can't leave my negative environment without leaving behind my fiancé
+    - My child urinated in his mother's drink
+    - Should I leave my boyfriend?
+    - Should I tell my kids that Santa is real after their dad told them he is not?
+    - How can I help my kids get along?
+    - How can I help my toddler with toilet training when he gags every time he sees his poop?
+    - My parents aren't letting my boyfriend and I talk or see each other while I'm pregnant
+    - My husband is harsh towards our son and threatened me
+    - I am bipolar and have been absolutely angry for over the last year at my daughter
+    - I want to get back with my kid's mother and be a family again
+    - How do I stop my step child from hurting my biological child?
+    - How can I get into a relationship with a girl?
+    - How do I cope with never being good enough?
+    - I feel like I failed myself
+    - I Sometimes I feel like I hate myself
+    - How do I handle being wanted in a relationship when I'm used to feeling unwanted?
+    - Should I break up with my live-in girlfriend?
+    - I weigh over 220 pounds and I am 16 years old
+    - My relationship is suffering from severe abandonment issues
+    - Why am I starting to not like myself?
+    - How can I feel less self-conscious about my weight?
+    - How do I save my marriage?
+    - How do you overcome an embarrassing mistake and forgive yourself?
+    - I am very self conscious about my body
+    - Why do I feel like I can never meet people's expectations?
+    - Why do I have low self-esteem and lack confidence?
+    - How can I not hate myself?
+    - I hate the way I look
+    - Why am I so nervous talking to people?
+    - What can I do about my roommate's drinking problem?
+    - How can I care less about what people think?
+    - i feel like i was born in the wrong body
+    - What can I do when I feel like I'm not using my potential?
+    - How can I forgive myself?
+    - Why do I feel like everyone hates me?
+    - Am I going to be alone forever?
+    - I can't focus when I'm doing work, even when I try to force myself to do it
+    - Why do I keep letting myself get cheated on?
+    - How can my boyfriend forgive me when I can't forgive myself?
+    - How do I cope or motivate myself without pain
+    - Why am I so angry and jealous?
+    - How can I get over my ex-boyfriend cheating on me?
+    - How come I feel ugly?
+    - How can I be sure that I'm not choosing my relationship out of fear of being alone?
+    - I'm desperate for attention, and I don't know what to do about it
+    - I feel like I'm this dumb fat girl that no one likes, and everything is my fault. Are these normal teenage girl feelings?
+    - How do I get my sex drive back after my rape?
+    - I don't trust my boyfriend
+    - All I can do is cry and hate myself
+    - My ex left without fully explaining but I feel broken and empty
+    - How do I cope with the feelings like I'm not good enough?
+    - How can I be more confident around girls?
+    - I'm a 19 year old male with low self esteem. I've always been very closed off about my feelings and problems
+    - Should I end it?
+    - How do I get my husband back?
+    - How do I get over my heartbreak?
+    - Should I tell my separated wife that I'm expecting a child with the woman I'm dating?
+    - How to get over somebody?
+    - How do I get over a person I fell in love with?
+    - How do I deal with the break off of my engagement?
+    - Did I make a mistake breaking up with a guy who said his ex-girlfriend will always be on his mind?
+    - Why does my spouse tell me he doesn't want me, but also gets jealous of me?
+    - Should I move on from my ex-husband?
+    - How do I break an unhealthy relationship pattern?
+    - Should I give him another chance?
+    - How do I move on?
+    - Why did my sister not defend me when my ex-husband said bad things about me?
+    - How can I get my ex-girlfriend back?
+    - How do I get my ex-girlfriend back?
+    - How can I deal with a break up?
+    - How can I find out I'm being cheated on?
+    - My husband kept a huge secret from me
+    - How long do I wait on my ex-fiancé to choose me over his ex-girlfriend?
+    - How do I let go of someone who continues to hurt me
+    - Why is it so hard for me to be social?
+    - I’m having problems moving on
+    - Is my husband having a midlife crisis?
+    - I'm not sure if I want to trust my husband again
+    - Why do I still feel a connection with my ex-boyfriend that hurt me very badly?
+    - I’ve been separated from my husband for six months and he still has not filed for divorce
+    - Can our marriage still be saved?
+    - My husband and I are separated. I'm so scared of getting divorced
+    - How do I fix my marriage?
+    - How do I cope and rebuild my life after ending an 11 year abusive marriage?
+    - How do I get over a friend/coworker?
+    - A friend of my child's father is sending him inappropriate content
+    - How do I assert myself with a boss who called me co-dependent?
+    - How can I cope with work related stress better?
+    - I'm attracted to my boss
+    - Why do I feel like I'm always wrong in everything in my relationship?
+    - My sexual partner wants me to reimburse him on a hotel room
+    - I feel like I'm going to get fired because I cried at work
+    - What can I do if my coworkers accuse me of mood swings?
+    - How do I get over a coworker?
+    - Is it unethical to have a relationship with a fellow counselor?
+    - How do I find myself?
+    - I want to be a boy but I can't because of my religion
+    - How can I help my fiancé accept and let go of my past?
+    - I'm struggeling with the idea of if God real or not?
+    - Does it mean that he isn't the one God planned for me if we had sex as Christians?
+    - I'm dating a boy that my religious parents don't like, and I'm having trouble finding my identity
+    - My son and family has different views about religion. How do I resolve these differences?
+    - My past is holding me back from my future. How can I get my life back?
+    - Is it possible for a person to stop feeling emotions?
+    - Could a car accident add more problems to my posttraumatic stress disorder?
+    - PTSD is impacting my whole life
+    - How do I cope with posttraumatic stress disorder and its triggers?
+    - My girlfriend can't stand it when I touch her
+    - What is the best way to cope with the loss of someone to suicide?
+    - How can I avoid having past traumatic experiences affect my present and future?
+    - How do I let go of the abuse my dad showed me?
+    - How do I get over a fear of pain during sex?
+    - How do I move on from almost being raped?
+    - How do I get over rape trauma syndrome?
+    - I have nightmares and flashbacks about a past relationship
+    - How do I deal with my trauma?
+    - Can hypnosis allow me to recall trauma from 35 years ago?
+    - How can I have a normal sex life with my significant other when I keep having triggers from past sexual abuse?
+    - Can I get over PTSD on my own?
+    - How can I unblock my memories?
+    - My father has always been horrible to me
+    - Should we put off kids until my husband is mentally cured?
+    - Can implanted thoughts be reversed at all?
+    - How do I remember and deal with things I did as a kid?
+    - How do I get my partner to stop verbally abusing me?
+    - Is there something I should do to help my friend who is in an abusive relationship?
+    - How can I help my boyfriend's anger issues?
+    - How can I quit resenting my parents for the horrible life they provided for me?
+    - I'm just not happy with my marriage
+    - I'm falling for my abusive and cheating ex-boyfriend
+    - Is there anything I can do to help my siblings escape our emotionally abusive father?
+    - How do I overcome the nightmare from the domestic violence of a past relationship?
+    - Is my therapist telling my abuser the results of my test a HIPAA violation?
+    - My husband treats me terribly
+    - Is it possible to gain joy and prosperity in my relationship after years of unhappiness?
+    - I want to stop physically abusing my girlfriend
+    - How do I get out of an abusive relationship?
+    - I have a son with my girlfriend, but she is emotionally abusive. What do I do?
+    - When should I give up on a relationship?
+    - I endured sexual and physical abuse by my brother as child
+    - How can I control myself and my anger?
+    - How do I not be angry all the time?
+    - How can I control my temper?
+    - Why do I get angry so easily?
+    - How do I deal with my alcoholic boyfriend with a dark past?
+    - My girlfriend always brings up past events and talks negatively about them
+    - Why did my boyfriend hit himself in the face during an argument?
+    - How can I just be happy and not mad all the time?
+    - How can I be less angry?
+    - I need help controlling my anger
+    - How do I deal with my son's violent thoughts and dreams?
+    - How can I deal with the anger problems I've gained from my soon-to-be husband?
+    - How can I stop being so angry?
+    - Why am I so mad?
+    - How can I control myself and learn to let things go or communicate?
+    - How can I be less confused about my feelings towards anything?
+    - I need to know how to cope with misophonia before I go completely insane
+    - i need answers to my angry, possessiveness, and urges
+    - How can I control my anger?
+    - How do I manage my anger?
+    - Why am I constantly angry?
+    - My husband and I can’t talk to each other without arguing
+    - Why do I get random spurts of anger over petty things?
+    - I have anger issues. I am extremely explosive about the simplest things
+    - How do I get rid of my nightmares?
+    - Why do I get a weird feeling every few months or so?
+    - Is it normal to blame myself for someone else's actions?
+    - I’ve suffered from insomnia and nightmares for about 3 years
+    - Why am I dreaming so much?
+    - How can I not be afraid of commitment?
+    - I feel completely alone in my marriage
+    - I'm not comfortable with my girlfriend showing off her body on social media
+    - I want to have a threesome with my husband and another girl, but I feel really nervous
+    - Should I get a divorce?
+    - How can I have a better sex life when I don't like sex?
+    - How can I tell if my spouse had sex with a prostitute?
+    - What's the best way to handle my spouse's narcissism and bipolar disorder?
+    - Is it possible for a couple to overcome cheating if it only happened once?
+    - How can I cope with being led on?
+    - Is it normal to be more sensitive when I'm not intimate with my boyfriend?
+    - What should I do about my husband's emotional affair with his ex-wife?
+    - How do I make my relationship with my girlfriend better?
+    - Why is my ex-boyfriend upset with me?
+    - My long-distance boyfriend has started to pull away from me—what can I do?
+    - What can I do about my boyfriend being so close with another girl?
+    - I'm soon to be married, and I've been messing around with others
+    - My friend had lied about every aspect of her life—what do I do?
+    - My boyfriend wants nothing to do with me after his dad's suicide
+    - How do I open up to someone?
+    - How do I handle getting the silent treatment from my boyfriend?
+    - My husband cheated before marriage—what can I do?
+    - Should I let the father of my kids go?
+    - Should I stay with my manipulative husband?
+    - My boyfriend doesn't compromise with me
+    - How can I open up to the ones I love?
+    - My boyfriend's family expects him to take them on dates, and he doesn't think anything's wrong
+    - I started dating someone and found out they lied about some things—what should I do?
+    - What can I do about my fiancé putting his family first before our family?
+    - How can I regain my boyfriend's trust back after being completely dishonest with him about a lot of things?
+    - Can someone love you and say hurtful things?
+    - Am I being picky when it comes to my boyfriend?
+    - How can I stop being jealous of my best friend's boyfriend?
+    - What should I do after finding my boyfriend flirting on dating websites?
+    - My boyfriend does not do some sexual things with me that he has done with other people
+    - My boyfriend of a little over a year has a problem with me going to visit my mother
+    - Is it wrong for me to be attracted to my girlfriend?
+    - How do I tell a girl that I crossdress?
+    - My husband was lying about drinking again
+    - Why can't I get an erection with my girlfriend?
+    - What should I do about my marriage and my wife's behavior?
+    - Why do I always push my boyfriend away?
+    - Should I be upset that my husband may have lied to me again?
+    - How do I handle my fiancée always telling me how bad of a job I'm doing in making them happy?
+    - Why is my fiancé angry at me about his automobile insurance?
+    - How do I deal with a lack of intimacy and partner's addiction to solo sex and porn?
+    - My husband only has sex with me once a month or less
+    - What should my boyfriend and I do to cope with his cancer?
+    - How do I get over jealousy?
+    - What can I do about my boyfriend insulting my body?
+    - How do I talk to my girlfriend about my anxiety from her exes?
+    - What should I do about not being sexually attracted to my girlfriend of five years?
+    - Why do I always think my girl is cheating on me?
+    - How do I fall back in love with my wife?
+    - How do I deal with a man who only contributes financially?
+    - How do I stop feeling jealous in my relationship?
+    - My boyfriend wants to know every details of my sex life
+    - My husband said he loves me but is not in love with me
+    - My wife won't do things she used to do
+    - Is it wrong to cheat on my husband?
+    - I am afraid of sex
+    - I cheated on my partner, and I don't know how to feel
+    - I think my trust issues are going to end my relationship early
+    - How do I stay when the spark is gone?
+    - I don't know if I should end my relationship or try and stick through it
+    - My boyfriend says he doesn't like to do things with me because we fight too much
+    - My boyfriend is always accusing me of not loving him
+    - How can I get my fiancé to notice me again?
+    - Can my marriage be saved?
+    - How do you get over someone cheating on you when you are trying to make it work?
+    - Am I a lesbian because I love a girl?
+    - Is it wrong to be antisocial around people?
+    - What should I do if I think my partner is cheating?
+    - My partner is bored of being intimate with me
+    - My wife doesn't want to have sex
+    - How do I get over the man I had an affair with?
+    - How can I get over the past in my relationship?
+    - My boyfriend wants me to sign a contract of things not to do
+    - I found my boyfriend talking to his ex-girlfriend
+    - How can I like pets?
+    - Should my wife and I seek any kind of counseling if she is convinced our marriage is over and has turned romantic love into platonic love?
+    - Why do I feel so lonely these days?
+    - Why do I hate sex?
+    - How do I get my wife to forgive me?
+    - How can I stop myself from making poor choices and hurting the one I love?
+    - My wife no longer wants sex
+    - Do I leave my cheating husband or share him with someone?
+    - What can i do if there is no trust in our relationship?
+    - I'm scared of hurting my boyfriend after he had a cyst removed from his testicles
+    - How do I stop obsessively checking if my boyfriend is cheating?
+    - My husband works all the time and neglects his family
+    - I want to have sexual experiences with adults, male or female
+    - Any suggestions for erection problems?
+    - My wife has a diminished libido, and is faking orgasms and denying it. What do I do?
+    - My wife and I have been married for over 3 years and we're tired of having sex
+    - I tell my husband I love him. But I don't believe it or feel it
+    - How do I deal with a weird fetish I'm afraid of opening up about?
+    - What should I do if my boyfriend can't get over my past?
+    - I'm losing my husband because my lack of sex drive
+    - I just lost my grandpa
+    - Why can't I stop crying?
+    - I lost my mom, and I feel like I'm depressed
+    - How can I stop craving nostalgia?
+    - I feel guilty about my fathers death
+    - I think my wife is running from the pain of losing our first born
+    - How do I find happiness after my boyfriend passed away?
+    - How do I stop grieving my mother’s death?
+    - I over endulge when I drink alcohol and feel extremely guilty about it the next day
+    - What can I do to help my dad stop drinking?
+    - I'm addicted to smoking. How can I stop?
+    - I don't know if my ex-boyfriend is using opiates again
+    - Is it okay if I take my friend's pills away?
+    - I found drugs in my moms drawer—what should I do?
+    - My brother is an addict. He has does nothing but ruin my family. I don't know how to cope with it anymore
+    - Can I sign my brother into a mental health facility?
+    - How can I stop abusing alcohol?
+    - My daughter-in-law is smoking marijuana while pregnant
+    - No matter what I do, my mom will almost always find something wrong with it
+    - How do I tell my elderly mother that I can’t stay for long visits?
+    - I want to make my own decisions
+    - How do I get my dad to understand that I don't want him to date or marry my best friend?
+    - How can I avoid family members who stress me out?
+    - What can I do about my family not accepting me as bisexual?
+    - How should I deal with my mom's controlling behavior?
+    - What can I do when my family doesn't accept my sexuality?
+    - Should I talk honestly to my brother about his girlfriend, risking our own relationship?
+    - I feel like I'm putting my full effort in my studies, but no one thinks that I am
+    - Why can't my mom ever be proud of me?
+    - How do I find a therapist for my family as a minor?
+    - What's wrong with me for going to summer school?
+    - I feel like my relationship is falling apart
+    - Is it wrong that I don't love or even like my sister?
+    - Escalating disagreements between mother and wife
+    - How do I choose the right path with my boyfriend?
+    - I feel like I'm on my own
+    - How can I create a better relationship with my adoptive mother?
+    - I don't know how to deal with my boyfriend's father
+    - Is it okay to date my ex-boyfriend’s cousin?
+    - My dad is mad because I identify as a male and I was born a female
+    - My sister and my husband had an affair
+    - I was duped into getting married to a therapist, but once her immigration status was secure, she bolted
+    - How can I tell my dad I'm a female-to-male transgender and I want to start binding?
+    - How can I make my mom love me the same as my siblings?
+    - Is my relationship with my stepdad normal?
+    - Why am I so protective of my friends and family?
+    - Is it normal to hate my mom?
+    - How do I pick which parents house I want to live at?
+    - What can I do about my dad being on drugs?
+    - How can I free myself from my narcissistic, codependent, ill mother?
+    - How can I get my mother to listen to me without her freaking out?
+    - Is it normal for my mom to get mad easily?
+    - I'm scared to tell my family that I'm bisexual
+    - How do I tell my parents that I'm gay?
+    - How can I deal with the stress of my mother?
+    - How do I handle all of my stress?
+    - What should I do if I found out one of my parents are cheating?
+    - How can I be more open and honest with my dad?
+    - My daughter is in her 30s, not married, and pregnant. How can I break the news to the family?
+    - Can a person be mean towards another person if that person was treated poorly before?
+    - How am I supposed to feel when I forgive someone?
+    - How can I have a better relationship with my mom?
+    - My brother never hangs out with me anymore
+    - My husband doesn't include me in the family
+    - What do I do about a cousin who makes me feel belittled, insecure and frustrated?
+    - I lie to my mom about my relationship
+    - My parents are threatening to send me away if I don't play basketball for a team I hate
+    - How can I have a better relationship with my father?
+    - My ex-boyfriend wouldn't let me have my daughter because I didn't know my stepdaughter's pick-up details
+    - Why does my mom show more love to my brothers than me?
+    - Some adult family members are acting erratically in my house
+    - I had an affair almost two decades ago. Recently found out it resulted in a child
+    - I'm in love with a sex offender, but my family doesn't accept him
+    - Where does a child go for help?
+    - My parents are threatening to get rid of the only things I still care about
+    - Keeping secrets from my family
+    - Is my marriage worth saving?
+    - What makes a good marriage?
+    - My wife is cheating and won’t tell me the truth
+    - How do I get my husband to listen to me?
+    - How can my marriage be fixed?
+    - What makes my husband so selfish when it comes to my feelings?
+    - About a year ago I found out my husband had cheated on me
+    - Why does my husband like dressing as a female in our bedroom?
+    - Why am I with my husband if he is mean?
+    - How do I deal with my husband being mean to me?
+    - My husband seems to be changing, and I feel angry and hurt
+    - Am I wrong because I don’t want to sit on the same couch my wife had sex with another man on while we were still married?
+    - I don't feel a connection to my husband anymore
+    - I'm disgusted by my own fetish
+    - My husband yells “enough” when I tell him he needs to change
+    - My husband doesn't trust me
+    - My husband seems to end his relationships with women whenever he has an infant
+    - How do I move on from my husband's cheating?
+    - How can I let go of my dream wedding?
+    - How do I see a therapist without having healthcare?
+    - How can I stop bulimia after 6 years?
+    - How do I handle my binge eating?
+    - How can I train myself to stop eating when I'm full?
+    - How can I be with the boy who liked me?
+    - Why do I feel like I always need to be in a relationship?
+    - My boyfriend is upset about my friendship with another guy
+    - Why can't I let myself trust my partner?
+    - How can I deal with a “crush” in a relationship?
+    - My ex-boyfriend say we're finished but still acts like we aren't
+    - I want to become a better man
+    - Should I seek help or should my boyfriend and I seek help together?
+    - Should I wait for this guy to make a move, or just move on?
+    - I have the perfect guy, but I'm not attracted to him
+    - How can I get over this girl I only knew for a year?
+    - How do I fix my relationship?
+    - How come no man sparks my interest?
+    - Why does my boyfriend threaten to leave every night?
+    - I'm having a hard time with a breakup
+    - I have a crush on my bestfriend's brother
+    - My boyfriend feels that I have taken advantage of him
+    - Why does my boyfriend think every some I like means something about our relationship?
+    - How can I stay strong?
+    - I feel like my fiance still in love with his ex
+    - I'm scared of losing my girlfriend
+    - Why is it hard for me to express myself?
+    - How can I be less dependent on my boyfriend?
+    - I just feel so alone
+    - How do I start taking initiative in my relationship?
+    - Why do my boyfriend and I have such trouble communicating?
+    - I'm in a relationship, and I think I like my ex-boyfriend. Who do I choose?
+    - Am I overreacting by breaking up with my boyfriend because he called me a particular profanity?
+    - How can I not miss my boyfriend while he's in Ireland?
+    - Why doesn't any guy want to date me?
+    - How can I ask my boyfriend about who he's texting?
+    - How can I keep a long distance relationship going?
+    - My new husband is constantly talking to himself
+    - My girlfriend is always accusing me of cheating on her when I haven't
+    - How do I end an unhealthy relationship?
+    - How do I know if I am obsessed or in love with someone?
+    - What can I do about my partner's parents not liking me?
+    - What can I do about my boyfriend's verbal abuse?
+    - How can I make girls love me and not just the attention I give them?
+    - How do I pick between two guys?
+    - How do I fix or leave a bad relationship?
+    - Am I unworthy of being in a meaningful relationship?
+    - How can I be less insecure and needy with my girlfriend?
+    - Is it okay for my girlfriend to have sex with other men since I can’t sexually perform?
+    - How can I rebuild the trust I destroyed from my porn addiction?
+    - Is it time to end my relationship with my boyfriend for good?
+    - Should I message my crush?
+    - How do I tell my boyfriend I wanna be with him but not in a relationship?
+    - My boyfriend says he needs time to think about us
+    - I am 18 years old with a baby on the way
+    - People make me sick
+    - My boyfriend isn't sexually performing like he did before I found out he was cheating
+    - Is it bad that I'm giving my ex-boyfriend another chance?
+    - Why is he treating me like I am not a good woman?
+    - The love of my life wants to try getting back together with her child's father
+    - How do I better handle my breakup?
+    - I'm a teenager, and I want to have a baby with my boyfriend
+    - I have feelings for one of my best friends
+    - How do I help my partner overcome depression over not having his kids by his side all the time?
+    - How do I get my girlfriend back?
+    - How to help my best friend get over a break up?
+    - My ex-boyfriend put himself on a dating website because he thought I wasn't interested
+    - Should I just move on from my demanding girlfriend?
+    - How do I get my guy to fall back in love with me?
+    - Should I let my boyfriend go?
+    - I feel like I can't control having inappropriate thoughts
+    - Is it acceptable for me to find another home for my boyfriend's dog?
+    - How can I get my boyfriend to see my point of view when we argue?
+    - My fiancé is trying to hide that he's texting his ex-girlfriend
+    - What can I do to keep my relationship as good as it could be?
+    - I'm with someone, but I have unresolved feelings for my ex-boyfriend
+    - I'm older and just experienced heartbreak
+    - Should I get back together with my ex-boyfriend who has trust issues?
+    - Is it possible to get my ex-boyfriend help, forcibly?
+    - My boyfriend thinks he's perfect and puts his friends before me
+    - How will I check if there really is something wrong with me?
+    - I don't know where the lines should be drawn with my boyfriend's ex
+    - My companion tells me he wants nothing to do with me
+    - My best friend says she loves me but is talking to a random guy
+    - Why do I feel like I need a man in my life?
+    - My fiancé cheated. How can we mend our relationship?
+    - There's this girl I've been dating for months
+    - What can I communicate with a person who is sensitive to negativity in a disagreement?
+    - I feel like I could never be with anyone because no one would want me
+    - Should I be concerned that my boyfriend will not introduce me to a female friend
+    - I cheated on my husband with one of his good friends a few years ago
+    - I just found out my boyfriend has been cheating on me
+    - My new husband constantly talks to himself
+    - I am in my mid-40s and am currently mending a broken heart over another failed relationship
+    - My relationship feels off and I feel insecure
+    - My ex-boyfriend and I broke up about 3 months ago and now he wants me back
+    - Me and my girlfriend of 7 years are looking for some free couples counseling in Modesto, CA
+    - I recently lied to my fiancé about my past
+    - How do balance attention between my girlfriend and my dogs?
+    - I have been in a relationship for a year and 7 months these few weeks have been bad
+    - I'm having a lot of conflict in my relationship
+    - How do I start talking again after a fight?
+    - Why do I keep getting with men that emotionally abuse me?
+    - How do I choose between two guys?
+    - Dealing with an unfaithful and judgmental significant other
+    - My girlfriend broke up with me but I want her back. What do I do?
+    - How can I be interested in the same sex after nearly 40 years of being straight?
+    - How do I know what my sexual orientation is?
+    - My wife outed me to her sister
+    - What does it mean that I feel like different genders?
+    - I’m afraid that I’m gay
+    - I crossdress and I don't know how to feel about it
+    - I'm going through dysphoria
+    - I'm starting to believe that I'm gay
+    - Am I gay if I like neither girls nor guys?
+    - How can I deal with gender dysphoria in a positive way?
+    - How can I know what my sexual orientation is?
+    - Why do I want to be the opposite sex so much?
+    - I'm questioning my sexuality
+    - I think I can become a transgender, but how can I be sure?
+    - How can I determine if I should be a boy or girl?
+    - How can I concentrate?
+    - How do I stop sneaking away from home at night?
+    - How can I get over my OCD and anxiety?
+    - What's going on with these mood swings?
+    - How can I make the dreams and voices go away?
+    - What is a psychotic seizure?
+    - How can I get out of my head and stop obsessive thoughts?
+    - Is it weird or dangerous to give myself advice through an imaginary friend?
+    - Do narcissists get healed by rationalizing?
+    - What can I do about those people that are so misunderstanding and judgmental?
+    - I think I have a fetish that might be getting out of control
+    - The Underlying Causes of Being Possessive
+    - Why can't I change?
+    - Why don't I feel normal?
+    - I did something I can't get over
+    - Why do I think about how easy it would be to hurt cute animals?
+    - Why does my granddaughter instantly switch moods?
+    - How do I know if my daughter has bipolar disorder?
+    - How can I be happier and healthier?
+    - Do feelings of depersonalization go away?
+    - Do I have bipolar disorder?
+    - What are some physical signs of psychosis?
+    - I've been having breakdowns for no reason at all
+    - Is my ex-boyfriend a pathological liar?
+    - Why do I think about death?
+    - How can I stop being so emotional all the time over worthless stuff?
+    - How can I get rid of my laziness?
+    - I have a compulsion to fill in holes in my skin with ink
+    - How do I know if I have bipolar disorder?
+    - How can I get away from my phone?
+    - The organization I work for has told me I cannot go to my 12 step meetings
+    - Is there a lawsuit for counselors and therapists who failed to report a relapse?
+    - Unethical Therapy Practices
+    - Is it a normal practice for a team of doctors who are connected by state or profession to discontinue your treatment?
+    - Is there anything I can do about my therapist blocking my psychiatric services?
+    - Is it ethical for a social worker to ignore a client’s phone calls?
+    - How can I see if a therapist if my mom can't afford it?
+    - I told my family doctor yesterday, that I am hoarding my Ativan pills. Is he legally required to tell my psychiatrist or therapist?
+    - How does counseling end?
+    - My therapist betrayed my trust
+    - I'm in high school, and I want to be a psychologist
+    - Is it appropriate to give my counselor a bottle of wine for Christmas?
+    - Should I get a new therapist?
+    - How do I approach my doctor about seeing a therapist?
+    - How can I be less stressed?
+    - How do I relieve stress and find balance?
+    - Why do I get aroused when women call me gay?
+    - Is there a reason I have always been attracted to men much older then me?
+    - How do I deal with sexual tension?
+    - How can I get some closure on an experience I regret?
+    - Why do some people try to make a joke for everything and laugh at everything?
+    - How do I repair my friendship?
+    - I have an old roommate who might be a psychopath
+    - Why do I always get ignored by people?
+    - How do I stop a bully who adults wouldn't recognize as bullying without speaking to the bully?
+    - My friends don't put effort into our relationship
+    - How do I trust others?
+    - The girls at my coming-of-age party don't like their dresses
+    - How do I learn to let go of past problems and live one day at a time?
+    - I feel like my friends are ganging up on me
+    - My friends accusing me of having problems
+    - How do I deal with bullying at school?
+    - The child I nanny hates me!
+    - How can I see my base doctor without my ID?
+    - How do therapists characterize personality types?
+    - Why can't I stop these thoughts?
+    - I think I empathize too much
+    - How would I know if I have the right therapist?
+    - Is it normal to cry at therapy?
+    - What are the skills needed by a counselor?
+    - Are some clients more difficult than others?
+    - How does counseling help people?
+    - How does someone approach a counselor?
+    - What happens in a counseling session?
+    - Escalating disagreements between mother and wife
+    - I'm addicted to smoking. How can I stop?
+    - Keeping secrets from my family
+    - The Underlying Causes of Being Possessive
+    - Can I control anxiety without medication?
+    - How do I break an unhealthy relationship pattern?
+    - I have anger issues. I am extremely explosive about the simplest things
+    - I’ve suffered from insomnia and nightmares for about 3 years
+    - Unethical Therapy Practices
+    - My friends accusing me of having problems
+    - About a year ago I found out my husband had cheated on me.
+    - Sleeping, Anger and Anxiety
+    - I'm losing my husband because my lack of sex drive
+    - I need help of letting go of a man who hurt me but it’s so hard. How do I do it?
+    - My parents are threatening to get rid of the only things I still care about
+    - My girlfriend broke up with me but I want her back.  What do I do?
+    - I endured sexual and physical abuse by my brother as child
+    - How can I get people to listen?
+    - Dealing with an unfaithful and judgmental significant other
+    - How can I control my sexual urges?
+    - How do I deal with my son's violent thoughts and dreams?
+    - I'm experiencing panic attacks when I'm physically separated from my girlfriend
+    - How can I see my base doctor without my ID?
+    - When should I give up on a relationship?
+    - How do I cope and rebuild my life after ending an 11 year abusive marriage?
+    - I'm going through depression right now and my relationship is suffering
+    - How can I let go of my dream wedding?
+    - How do I stop grieving my mother’s death?
+    - Where does a child go for help?
+    - How do I fix my marriage?
+    - How do I find happiness after my boyfriend passed away?
+    - How do I remember and deal with things I did as a kid?
+    - How do I choose between two guys?
+    - What should I do if my boyfriend can't get over my past?
+    - I feel like I could never be with anyone because no one would want me
+    - How do I stop my step child from hurting my biological child?
+    - How do I deal with a weird fetish I'm afraid of opening up about?
+    - What can I do if my coworkers accuse me of mood swings?
+    - How do I deal with depression?
+    - What can I do if my parents refuse to acknowledge my anxiety and self-confidence issues?
+    - How do I overcome being jealous of my boyfriends mother?
+    - Any suggestions for erection problems?
+    - How do I move on from my husband's cheating?
+    - Why do I keep getting with men that emotionally abuse me?
+    - How can I determine if I should be a boy or girl?
+    - How do I get over anxiety, depression, and isolation?
+    - What do I do about a cousin who makes me feel belittled, insecure and frustrated?
+    - I have a son with my girlfriend, but she is emotionally abusive. What do I do?
+    - What can I do to help my dad stop drinking?
+    - My son and family has different views about religion. How do I resolve these differences?
+    - How do I get over a slump?
+    - How do I approach my doctor about seeing a therapist?
+    - How can I slow down and enjoy life?
+    - I get depressed whenever anyone I care about is too busy to be with me. What do I do?
+    - How do I start talking again after a fight?
+    - How do I get out of an abusive relationship?
+    - I'm in love with a sex offender, but my family doesn't accept him
+    - I weigh over 220 pounds and I am 16 years old
+    - I'm a 19 year old male with low self esteem. I've always been very closed off about my feelings and problems.
+    - I lied to my mom, then felt bad and told her the truth
+    - I tell my husband I love him. But I don't believe it or feel it.
+    - How do couples keep from being at risk for divorce?
+    - My wife and I have been married for over 3 years and we're tired of having sex
+    - I feel like my friends are ganging up on me
+    - I had a baby about 2 months ago and I really haven't been feeling myself
+    - I had an affair almost two decades ago. Recently found out it resulted in a child
+    - I'm having a lot of conflict in my relationship
+    - My wife has a diminished libido, and is faking orgasms and denying it. What do I do?
+    - How do I cope with losing my mom?
+    - How do I cope with never being good enough?
+    - I have been in a relationship for a year and 7 months these few weeks have been bad
+    - How do you deal with mental illness (depression, anxiety) in a relationship?
+    - I want to get back with my kid's mother and be a family again
+    - How do balance attention between my girlfriend and my dogs?
+    - I recently lied to my fiancé about my past
+    - How do I deal with depersonalisation and derealisation?
+    - I keep on changing my life when things get tough.
+    - How can I be more confident around girls?
+    - Me and my girlfriend of 7 years are looking for some free couples counseling in Modesto, CA
+    - My ex-boyfriend and I broke up about 3 months ago and now he wants me back
+    - How do I cope with the feelings like I'm not good enough?
+    - I cheated on my husband with one of his good friends a few years ago
+    - How do I quit letting little things bother me and be the mom that my kids deserve?
+    - I have come to the realization that my boyfriend and I want different things
+    - Should I be concerned that my boyfriend will not introduce me to a female friend
+    - What do you do if your partner isn't satisfying your needs sexually?
+    - Am I unworthy of being in a meaningful relationship?
+    - How do I communicate with my boyfriend of ten years without him feeling like I'm attacking him?
+    - I am fearful of social situations and avoiding people all together
+    - How can I train myself to stop eating when I'm full?
+    - What can I communicate with a person who is sensitive to negativity in a disagreement?
+    - My new husband is constantly talking to himself.
+    - What is the proper procedure if your child's therapist is leaving the practice to work elsewhere?
+    - Is it unethical to have a relationship with a fellow counselor?
+    - Is work burnout a real condition?
+    - There's this girl I've been dating for months
+    - I just found out my boyfriend has been cheating on me
+    - My new husband constantly talks to himself
+    - I am in my mid-40s and am currently mending a broken heart over another failed relationship
+    - My relationship feels off and I feel insecure
+    - Is it possible to get PTSD from being very depressed?
+    - How can I get clarity for myself and move on in a healthy manner?
+    - My fiancé cheated. How can we mend our relationship?
+    - My ex left without fully explaining but I feel broken and empty
+    - My companion tells me he wants nothing to do with me
+    - Why am I dreaming so much?
+    - Am I going to be alone forever?
+    - I hate talking to people much less strangers
+    - I feel really down all the time
+    - Am I somehow stressing myself out?
+    - My boyfriend says he needs time to think about us
+    - Thoughts of afterlife causes anxiety
+    - My husband and I are separated. I'm so scared of getting divorced
+    - I am bipolar and have been absolutely angry for over the last year at my daughter
+    - I hardly eat. But I gain weight instead of lose weight. Why?
+    - Why do I feel like I need a man in my life?
+    - My best friend says she loves me but is talking to a random guy
+    - All I can do is cry and hate myself
+    - I don't know where the lines should be drawn with my boyfriend's ex
+    - My therapist betrayed my trust
+    - I don't trust my boyfriend
+    - Can our marriage still be saved?
+    - I don't believe in myself anymore
+    - How can someone like me be happy?
+    - How will I check if there really is something wrong with me?
+    - Some adult family members are acting erratically in my house
+    - I'm being emotionally abused by my dad. I need advice on how to hold my temper with him.
+    - My husband is harsh towards our son and threatened me
+    - I was duped into getting married to a therapist, but once her immigration status was secure, she bolted.
+    - Why is he treating me like I am not a good woman?
+    - My parents aren't letting my boyfriend and I talk or see each other while I'm pregnant
+    - How do I, a LPC, start an online practice?
+    - I'm going through dysphoria
+    - How do I go about asking my ex-girlfriend to expose me to her friends so I can come out finally?
+    - How do I cure myself of being a transvestite?
+    - I'm transgender. I want help and I need help.
+    - I want to have sexual experiences with adults, male or female
+    - I'm depressed because my wife is divorcing me and I haven't seen my child in a while.
+    - How can I deal with the anger problems I've gained from my soon-to-be husband?
+    - How do I cope with separation anxiety while boyfriend is out of town?
+    - Why do I get random spurts of anger over petty things?
+    - My husband wants a divorce after I was diagnosed with severe depression.
+    - My daughter-in-law is smoking marijuana while pregnant.
+    - What are the general prognosis for ultradian cycling bipolar to mix with coexisting mild borderline personality disorder, anxiety, PTSD
+    - How do I fight inner loneliness from depression and a severe anxiety disorder?
+    - How do I become less anxious in conversations?
+    - My parents are getting a divorce and I feel depressed.
+    - Could a rape that happened years ago be the cause of my anxiety?
+    - How can I help my toddler with toilet training when he gags every time he sees his poop?
+    - How do I get my sex drive back after my rape?
+    - How can I stop feeling sad at my mother's passing over a year ago?
+    - My husband seems to end his relationships with women whenever he has an infant.
+    - Is it wrong that I don't love or even like my sister?
+    - My boyfriend thinks he's perfect and puts his friends before me.
+    - Is it possible to get my ex-boyfriend help, forcibly?
+    - Should I get back together with my ex-boyfriend who has trust issues?
+    - Why does my mom show more love to my brothers than me?
+    - I'm older and just experienced heartbreak.
+    - Is it okay for my girlfriend to have sex with other men since I can’t sexually perform?
+    - My ex-boyfriend wouldn't let me have my daughter because I didn't know my stepdaughter's pick-up details.
+    - I'm with someone, but I have unresolved feelings for my ex-boyfriend.
+    - My husband and I can’t talk to each other without arguing.
+    - How can I help my kids get along?
+    - I lie to my mom about my relationship.
+    - My husband seems to be changing, and I feel angry and hurt.
+    - Is it normal for a pregnant woman to cry over everything?
+    - What can I do to keep my relationship as good as it could be?
+    - My husband works all the time and neglects his family.
+    - I always feel the need to tell people everything.
+    - Can a mental breakdown last 10-15 minutes?
+    - I have the perfect guy, but I'm not attracted to him.
+    - What can I do when I can’t stand being alone?
+    - How can I get some closure on an experience I regret?
+    - I feel like I'm this dumb fat girl that no one likes, and everything is my fault. Are these normal teenage girl feelings?
+    - In the state of New York, is it legal for someone to record a counseling session without telling the counselor or the other person in the session?
+    - I'm in high school, and I want to be a psychologist.
+    - Should I get a new therapist?
+    - Is it appropriate to give my counselor a bottle of wine for Christmas?
+    - I think my wife is running from the pain of losing our first born.
+    - How do I stop obsessively checking if my boyfriend is cheating?
+    - Why am I so nervous talking to people?
+    - My fiancé is trying to hide that he's texting his ex-girlfriend.
+    - I'm scared to go to a doctor or take anti-depressants.
+    - I have an old roommate who might be a psychopath.
+    - How can I control my anger?
+    - My ex-boyfriend is with someone new, and it hurts.
+    - How can I have a better relationship with my father?
+    - My husband doesn't trust me.
+    - How can I stop abusing alcohol?
+    - How do I find myself?
+    - How do I get over a coworker?
+    - How do I see a therapist without having healthcare?
+    - Should I break up with my live-in girlfriend?
+    - I'm scared of hurting my boyfriend after he had a cyst removed from his testicles.
+    - My parents are threatening to send me away if I don't play basketball for a team I hate.
+    - How can I get my boyfriend to see my point of view when we argue?
+    - Relationships cause me anxiety and nausea.
+    - What can i do if there is no trust in our relationship?
+    - I'm studying abroad, and I'm depressed.
+    - How do you cope with the death of your child, while surrounded with your parents who aren't supportive and disregard your feelings?
+    - How do I make myself happy without someone who made me happy?
+    - I'm overwhelmed and depressed
+    - How do I deal with anger problems towards my mom
+    - My husband yells “enough” when I tell him he needs to change
+    - Is it acceptable for me to find another home for my boyfriend's dog?
+    - Why do I see things that are not actually there?
+    - How do I know if I have social anxiety?
+    - How do I deal with parental figures who have hurt me?
+    - Does my fiancée need a service dog?
+    - I’ve been separated from my husband for six months and he still has not filed for divorce.
+    - Does my friend have depression?
+    - I always feel depressed.
+    - I'm desperate for attention, and I don't know what to do about it.
+    - How do I know if I have bipolar disorder?
+    - Why do I feel like I’m watching my life from a window?
+    - I feel like I can't control having inappropriate thoughts.
+    - My brother never hangs out with me anymore.
+    - My husband doesn't include me in the family.
+    - My wife is cheating and won’t tell me the truth.
+    - I have a compulsion to fill in holes in my skin with ink.
+    - I'm worried that I will be single forever.
+    - How can I be happy again?
+    - How do I become more confident and face social situations?
+    - How can I be sure that I'm not choosing my relationship out of fear of being alone?
+    - How can I have a better relationship with my mom?
+    - How can my boyfriend forgive me when I can't forgive myself?
+    - How do I cope or motivate myself without pain
+    - Why do I crave depression?
+    - Is my ex-boyfriend a pathological liar?
+    - The love of my life wants to try getting back together with her child's father.
+    - I told my family doctor yesterday, that I am hoarding my Ativan pills. Is he legally required to tell my psychiatrist or therapist?
+    - Can implanted thoughts be reversed at all?
+    - Should I let my boyfriend go?
+    - Should I go back on my medicine?
+    - Can my marriage be saved?
+    - Why am I constantly angry?
+    - How am I supposed to feel when I forgive someone?
+    - Should I tell my kids that Santa is real after their dad told them he is not?
+    - How do I get my guy to fall back in love with me?
+    - Do I leave my cheating husband or share him with someone?
+    - My wife no longer wants sex.
+    - Should I just move on from my demanding girlfriend?
+    - Why won’t my boyfriend for almost two years talk about our future together when he says he’s in love with me?
+    - How do I manage my anger?
+    - Should I leave my boyfriend?
+    - My child urinated in his mother's drink.
+    - How can I stop myself from making poor choices and hurting the one I love?
+    - I can't leave my negative environment without leaving behind my fiancé.
+    - How do I open up to someone?
+    - How do I get my wife to forgive me?
+    - How can I get rid of my laziness?
+    - My ex-boyfriend put himself on a dating website because he thought I wasn't interested.
+    - I'm disgusted by my own fetish.
+    - Why does the voice in my head never stop?
+    - How to help my best friend get over a break up?
+    - How can I deal with flashbacks of trauma?
+    - How come I feel ugly?
+    - Can a past therapist disclose information to a current therapist that you are seeing?
+    - I want to stop physically abusing my girlfriend.
+    - Should my step-daughters be told that their step-father has a child pornography addiction?
+    - I don't feel a connection to my husband anymore.
+    - Am I wrong because I don’t want to sit on the same couch my wife had sex with another man on while we were still married?
+    - How can I be less anxious when dealing with my toddler?
+    - Is it possible to gain joy and prosperity in my relationship after years of unhappiness?
+    - How do I get my girlfriend back?
+    - How do I find a therapist for my family as a minor?
+    - Is my therapist telling my abuser the results of my test a HIPAA violation?
+    - Why do I hate sex?
+    - How can I be less afraid of rape?
+    - Why do I feel so lonely these days?
+    - Could a car accident add more problems to my posttraumatic stress disorder?
+    - I like a guy, but I worry that he thinks I'm creepy.
+    - What does it mean when my wife says she loves me but isn't in love with me?
+    - How can I control myself and learn to let things go or communicate?
+    - How can I avoid having past traumatic experiences affect my present and future?
+    - Should my wife and I seek any kind of counseling if she is convinced our marriage is over and has turned romantic love into platonic love?
+    - Should I take my daughter to therapy?
+    - How do I help my partner overcome depression over not having his kids by his side all the time?
+    - How can I like pets?
+    - I don't know what to do about my son's lying.
+    - I have feelings for one of my best friends.
+    - How can I get over my ex-boyfriend cheating on me?
+    - I'm depressed because my mother kicked me out after having a child.
+    - Why do I still feel a connection with my ex-boyfriend that hurt me very badly?
+    - How can I stop being so emotional all the time over worthless stuff?
+    - I found my boyfriend talking to his ex-girlfriend.
+    - Why do I think about death?
+    - Why am I not as comfortable around my boyfriend anymore?
+    - My husband treats me terribly.
+    - How do I tell my parents that I'm depressed and need help?
+    - My boyfriend wants me to sign a contract of things not to do.
+    - How can I help my daughter with her severe depression and her obsessive form of thinking?
+    - How do I learn to feel emotion?
+    - How do I not get depressed if my boyfriend doesn't want me anymore?
+    - My mentally-ill mother-in-law wants to babysit.
+    - How do I get my dad to understand that I don't want him to date or marry my best friend?
+    - My wife doesn't want to have sex.
+    - I think I can become a transgender, but how can I be sure?
+    - I'm a mess physically, mentally, emotionally, and spiritually.
+    - How can I get over the past in my relationship?
+    - How do I get over the man I had an affair with?
+    - What can I do if I need to talk to someone but I have no money?
+    - I'm dating a boy that my religious parents don't like, and I'm having trouble finding my identity.
+    - My partner is bored of being intimate with me.
+    - How can I forgive myself?
+    - What should I do if I think my partner is cheating?
+    - My daughter calls me crazy, and I’m not sure how to handle that.
+    - I have a tendency to not finish tasks I set my heart/mind to.
+    - Should we put off kids until my husband is mentally cured?
+    - How can I take my emotional support animal to school?
+    - My husband was lying about drinking again.
+    - Why am I so angry and jealous?
+    - I need help with my severe claustrophobia, motorphobia, and anxiety.
+    - My father has always been horrible to me.
+    - Can a person be mean towards another person if that person was treated poorly before?
+    - I get so angry that I want to explode.
+    - Is it wrong to be antisocial around people?
+    - I'm worried that there's something wrong with the guy I love.
+    - I'm depressed and unable to connect with people after my breakup.
+    - How do I learn to let go of past problems and live one day at a time?
+    - How can I get my fiancé to notice me again?
+    - I have voices in my head.
+    - Am I a lesbian because I love a girl?
+    - Is it wrong that I'm married and I have a best friend that's like a sister to me?
+    - i need answers to my angry, possessiveness, and urges
+    - I think I have anxiety and depression. It has manifested an extreme distrust for others.
+    - How do you get over someone cheating on you when you are trying to make it work?
+    - Why do I throw all my stuff away?
+    - I need to know how to cope with misophonia before I go completely insane.
+    - I'm questioning my sexuality.
+    - I'm a teenager, and I want to have a baby with my boyfriend.
+    - How do I get over my fears of dying?
+    - My brother's ex-girlfriend doesn't want her son to see us anymore.
+    - How do I know if I have depression?
+    - My daughter is in her 30s, not married, and pregnant. How can I break the news to the family?
+    - How do I get rid of depression?
+    - How do I better handle my breakup?
+    - Is it okay to date my ex-boyfriend’s cousin?
+    - Do I have social anxiety?
+    - My boyfriend is always accusing me of not loving him.
+    - My boyfriend says he doesn't like to do things with me because we fight too much.
+    - I’m afraid that I’m gay.
+    - How can I be less confused about my feelings towards anything?
+    - How can I deal with my paranoia?
+    - How can I feel so empty even though I'm only in my early teens?
+    - I'm just not happy with my marriage.
+    - I don't know if I should end my relationship or try and stick through it.
+    - Can a therapist have a client admitted to an eating disorder treatment center if the client does not want to go?
+    - How do I cope with bad thoughts?
+    - I'm in a lesbian relationship, and my mother doesn't really approve.
+    - I feel like there is a wedge between my daughter and I.
+    - I feel guilty because I didn't say no to a guy's advances.
+    - How do I handle my binge eating?
+    - Our grandson wants to talk to his estranged mom.
+    - How do I stay when the spark is gone?
+    - How do I deal with sexual tension?
+    - Why does it feel as if self-harm is an addiction?
+    - I feel insecure, on edge, and drink too much.
+    - How can I be more open and honest with my dad?
+    - How can I become more understanding?
+    - How can I unblock my memories?
+    - Is this depression?
+    - How can I get over social anxiety?
+    - Why am I so mad?
+    - How do I get back to my fun, happy self again?
+    - Is it bad that I'm giving my ex-boyfriend another chance?
+    - How can I love myself?
+    - Why do I keep letting myself get cheated on?
+    - How can I create a better relationship with my adoptive mother?
+    - Why am I all of a sudden having issues communicating with the guy I’m dating?
+    - How do I cope with posttraumatic stress disorder and its triggers?
+    - How do I get to know myself?
+    - If I'm not with my boyfriend, I have emotional breakdowns.
+    - Why do my boyfriend and I have such trouble communicating?
+    - How can I stop being so angry?
+    - I've been having breakdowns for no reason at all.
+    - My boyfriend isn't sexually performing like he did before I found out he was cheating.
+    - I think my trust issues are going to end my relationship early.
+    - Is it healthy to embarrass a child as punishment?
+    - People make me sick
+    - I'm not sure if I want to trust my husband again.
+    - I'm scared to tell my family that I'm bisexual.
+    - How can I get over my posttraumatic stress disorder without my parents knowing about it?
+    - What do I do when I have anxiety attacks?
+    - How can I avoid becoming wrapped up in family issues and control my anxiety about them?
+    - I can't focus when I'm doing work, even when I try to force myself to do it.
+    - Does it mean that he isn't the one God planned for me if we had sex as Christians?
+    - I am 18 years old with a baby on the way
+    - Why am I so anxious in social situations?
+    - I've been having the same dream since I was a child.
+    -
+    - How can I deal with the stress of my mother?
+    - A friend of my child's father is sending him inappropriate content
+    - I cheated on my partner, and I don't know how to feel.
+    - I'm depressed because I want to lose weight.
+    - How do I tell my boyfriend I wanna be with him but not in a relationship?
+    - I am afraid of sex.
+    - What should I do if I found out one of my parents are cheating?
+    - What are some physical signs of psychosis?
+    - How can I get over my depression and grief?
+    - How can I control my temper?
+    - I’m having problems moving on
+    - Can anxiety make me think I heard something about me?
+    - Is my husband having a midlife crisis?
+    - How do I handle all of my stress?
+    - Is it time to end my relationship with my boyfriend for good?
+    - How can I see if a therapist if my mom can't afford it?
+    - Is there a lawsuit for counselors and therapists who failed to report a relapse?
+    - Is it okay if I take my friend's pills away?
+    - I'm scared because my boyfriend is interested in BDSM.
+    - Should I message my crush?
+    - Why am I with my husband if he is mean?
+    - Is it wrong to cheat on my husband?
+    - Why do I feel like everyone hates me?
+    - Why do I feel like I can never meet people's expectations?
+    - Is it normal to blame myself for someone else's actions?
+    - How do I tell my parents that I'm gay?
+    - The girls at my coming-of-age party don't like their dresses.
+    - Why do I want to be the opposite sex so much?
+    - I lost my mom, and I feel like I'm depressed.
+    - Is it normal for my mom to get mad easily?
+    - What can I do when I feel like I'm not using my potential?
+    - How do I deal with OCD?
+    - I am paranoid that my boyfriend hiding something from me
+    - How can I rebuild the trust I destroyed from my porn addiction?
+    - How can I get therapy for posttraumatic stress disorder without any money or insurance?
+    - Can I get over PTSD on my own?
+    - How does a counselor diagnose someone with a disorder?
+    - My wife outed me to her sister
+    - How can I know what my sexual orientation is?
+    - i feel like i was born in the wrong body.
+    - I feel like I failed myself.
+    - How can I get my mother to listen to me without her freaking out?
+    - How can I improve my relationship with my daughter?
+    - Is there anything I can do about my depression and anxiety?
+    - Is it ethical for a social worker to ignore a client’s phone calls?
+    - I need help controlling my anger.
+    - If parents are divorced, is it acceptable for a counselor to allow an ex-spouse to be present during a child’s session?
+    - How can I care less about what people think?
+    - How do I handle getting the silent treatment from my boyfriend?
+    - I have nightmares and flashbacks about a past relationship
+    - Am I gay if I like neither girls nor guys?
+    - Is it normal for married men to fantasize about having oral sex with men?
+    - How can I have a normal sex life with my significant other when I keep having triggers from past sexual abuse?
+    - How can I be less insecure and needy with my girlfriend?
+    - How do I stop my nightmares?
+    - How do I overcome the nightmare from the domestic violence of a past relationship?
+    - How can I deal with my posttraumatic stress disorder?
+    - My son plays alone at recess.
+    - What is the best way to cope with the loss of someone to suicide?
+    - Do I have bipolar disorder?
+    - How can I deal with gender dysphoria in a positive way?
+    - Why is it so hard for me to talk publicly?
+    - My wife won't do things she used to do
+    - How can I control my anxiety?
+    - I hate the way I look
+    - I feel guilty about my fathers death
+    - Why have I been feeling empty lately?
+    - Do feelings of depersonalization go away?
+    - I am 20 and miserable.
+    - My friends don't put effort into our relationship
+    - Why is it so hard for me to be social?
+    - How do I let go of someone who continues to hurt me
+    - What can I do about my family not accepting me as bisexual?
+    - My sister and my husband had an affair.
+    - How do I get back on my feet while going through a bad divorce?
+    - I think my daughter is stressing too much.
+    - How do I deal with a lack of intimacy and partner's addiction to solo sex and porn?
+    - How can I manage my anxiety and depression so I can feel normal again?
+    - My boyfriend wants to know every details of my sex life.
+    - Is there a reason I have always been attracted to men much older then me?
+    - My traditional family is opposed to me moving in with my boyfriend who is 13 years older.
+    - My husband said he loves me but is not in love with me.
+    - How can I stop worrying much?
+    - I feel like I'm going to get fired because I cried at work.
+    - Why do I feel so lonely when I have friends and attention?
+    - How can I manage my anxiety?
+    - Why do I always feel like I'm being watched?
+    - I feel like my life is pointless.
+    - Is it strange that a male family member always want to play with my toddler daughter?
+    - Might I have depression?
+    - How can I bring up my possible depression to my parents?
+    - Should I move on from my ex-husband?
+    - How can I move forward from my boyfriend leaving me with no explanation?
+    - What should I do about my stress before track meets?
+    - How do I stop feeling jealous in my relationship?
+    - How do I get over my anxiety of talking to new people?
+    - I'm starting to believe that I'm gay
+    - How should we punish our son for peeing his pants because of laziness?
+    - How do I start taking initiative in my relationship?
+    - How do I help my husband get over his drinking addiction?
+    - How do I trust others?
+    - How can I get back to being the person I truly am?
+    - Should I feel guilty if my adult daughter cannot afford to go on a family vacation?
+    - How can I free myself from my narcissistic, codependent, ill mother?
+    - Why do I always feel anxious?
+    - Is there anything I can do to help my siblings escape our emotionally abusive father?
+    - How do I get rid of my nightmares?
+    - How do I deal with a man who only contributes financially?
+    - How do I fall back in love with my wife?
+    - No matter what I do, my mom will almost always find something wrong with it.
+    - How do I tell my elderly mother that I can’t stay for long visits?
+    - Is my depression sabotaging my job search?
+    - How do I know if I'm transgender?
+    - What can I do about my boyfriend insulting my body?
+    - What should my boyfriend and I do to cope with his cancer?
+    - How do I kick my stepdaughter out of our house because she isn't honoring boundaries set for her?
+    - What should I do about not being sexually attracted to my girlfriend of five years?
+    - Why am I so protective of my friends and family?
+    - How can my marriage be fixed?
+    - What can I do when I feel like my life is out of control?
+    - What can I do about my dad being on drugs?
+    - Why won't my boyfriend have sex with me?
+    - Does my daughter have a mental disability?
+    - How can I cope with depression?
+    - How do I know if my daughter has bipolar disorder?
+    - Is it weird or dangerous to give myself advice through an imaginary friend?
+    - How do I fix or leave a bad relationship?
+    - How do I pick which parents house I want to live at?
+    - How can I be happier and healthier?
+    - How can I be less angry?
+    - How do I pick between two guys?
+    - Is it possible that I have depression?
+    - What can I do about instant and major mood swings?
+    - Why can't I laugh anymore?
+    - Why am I so sad?
+    - How do I handle my fiancée always telling me how bad of a job I'm doing in making them happy?
+    - How can you get back to my old self?
+    - How can I resist the urge to cut?
+    - Is it normal to hate my mom?
+    - Why do I always think my girl is cheating on me?
+    - Why do I get a weird feeling every few months or so?
+    - Can hypnosis allow me to recall trauma from 35 years ago?
+    - What should I do when my parents won't let me see a therapist?
+    - How can I get past the hurt of being told by various significant others that I wasn't good enough to have a baby with?
+    - How do I overcome my depression?
+    - How do I move past my depression from being separated from the military?
+    - How can I just be happy and not mad all the time?
+    - How can I make girls love me and not just the attention I give them?
+    - How do I deal with my husband being mean to me?
+    - Is my relationship with my stepdad normal?
+    - Why does my granddaughter instantly switch moods?
+    - Why do I think about how easy it would be to hurt cute animals?
+    - How do I balance school and life?
+    - How do I deal with my trauma?
+    - How can I make my mom love me the same as my siblings?
+    - How can I be happy as a stay-at-home mom?
+    - How do I talk to my girlfriend about my anxiety from her exes?
+    - How do I stop feeling so awful?
+    - What can I do about my boyfriend's verbal abuse?
+    - What can I do about my partner's parents not liking me?
+    - How do I get over jealousy?
+    - How can I stop thinking so negatively about myself?
+    - My husband only has sex with me once a month or less.
+    - How do I tell my parents that I think I have some mental problems?
+    - What does it mean that I feel like different genders?
+    - Should I be upset that my husband may have lied to me again?
+    - How do you overcome an embarrassing mistake and forgive yourself?
+    - I'm struggeling with the idea of if God real or not?
+    - How can I take care of my depression from a breakup?
+    - How do I relieve stress and find balance?
+    - is it normal not to feel empathy?
+    - How can I tell my dad I'm a female-to-male transgender and I want to start binding?
+    - Do I have to go to counseling to get hormones to transition from female to male?
+    - How can I control myself and my anger?
+    - How can I make the dreams and voices go away?
+    - Why am I upset or down every day even when nothing is going on?
+    - How can I get over my fear of accidental pregnancy to have sex again?
+    - Should I get a divorce?
+    - What are the best ways to reduce anxiety?
+    - If I am trying to stop self-harming and I seek help, will I need to be put in an inpatient setting?
+    - Why do I feel like I always need to be in a relationship?
+    - How do I get over my heartbreak?
+    - Do I have anxiety?
+    - I'm soon to be married, and I've been messing around with others.
+    - My toddler wants her daddy to die when she's mad at him
+    - How do I shake self-doubt about sex?
+    - My husband makes me uncomfortable about sex.
+    - How can I talk to my psychologist about upping my dose of Xanax?
+    - Do I have some type of anxiety?
+    - How do I find out the cause of my depression and anxiety?
+    - My daughter won't stop stealing and lying.
+    - Why does my husband like dressing as a female in our bedroom?
+    - How do I know what my sexual orientation is?
+    - Why is my ex-boyfriend upset with me?
+    - What's the best way to handle my spouse's narcissism and bipolar disorder?
+    - What can I do about my depression and anxiety after trying so many things?
+    - How can I convince my mother I have anxiety and panic attacks?
+    - Why do some people try to make a joke for everything and laugh at everything?
+    - Why do I feel like I will never have a good career/amount to anything financially?
+    - What should I do about my husband's emotional affair with his ex-wife?
+    - My ex-boyfriend say we're finished but still acts like we aren't
+    - What is a psychotic seizure?
+    - How do I know if I am obsessed or in love with someone?
+    - How can I be less stressed out?
+    - How can I find myself again?
+    - Why do I feel like I don't belong anywhere?
+    - Why do I feel like I'm nothing more than a wife and mom?
+    - Is it normal to take a parent role and feel so hurt and broken as a teenager?
+    - What can I do about my boyfriend being so close with another girl?
+    - What can I do when my boyfriend says he's not ready for marriage?
+    - Why can't my mom ever be proud of me?
+    - Did I make a mistake breaking up with a guy who said his ex-girlfriend will always be on his mind?
+    - How do I cope with a break up if we still live together?
+    - My apartment manager won't let me keep an emotional support dog.
+    - Is being mean and fighting with my boyfriend normal after an abortion?
+    - How do you know if someone is an alcoholic?
+    - How do I deal with the pain of losing my baby?
+    - I have had a compulsive swallowing tic for the past 9 months—how can I get rid of it?
+    - How can I help my son succeed in life when he refuses it?
+    - How do I discuss my fetishes with wife when she is very sexually passive and insecure?
+    - How can I atone for being cowardly?
+    - I completely lost myself—how can I find myself again?
+    - How can I have a better sex life when I don't like sex?
+    - How can I avoid family members who stress me out?
+    - Why is my fiancé angry at me about his automobile insurance?
+    - How can I get my ex-girlfriend back?
+    - Why did my sister not defend me when my ex-husband said bad things about me?
+    - Do I text, call, or make contact first, the same day of the morning I left his house?
+    - Is there anything I can do to make my anxiety go away?
+    - How can I deal with a break up?
+    - Why does my spouse tell me he doesn't want me, but also gets jealous of me?
+    - How do I get my partner to stop verbally abusing me?
+    - How do I handle being wanted in a relationship when I'm used to feeling unwanted?
+    - How do I make my relationship with my girlfriend better?
+    - My friend had lied about every aspect of her life—what do I do?
+    - What is social anxiety?
+    - I feel like I'm putting my full effort in my studies, but no one thinks that I am.
+    - How do I repair my friendship?
+    - Should I talk honestly to my brother about his girlfriend, risking our own relationship?
+    - Is it bad to fantasize about my mom?
+    - Why am I sick to my stomach when I stand up?
+    - Can someone with bipolar disorder feel like they are not themselves, like an observer in their own body and not really in control?
+    - What can I do when my family doesn't accept my sexuality?
+    - The organization I work for has told me I cannot go to my 12 step meetings.
+    - What should I do about my marriage and my wife's behavior?
+    - I crossdress and I don't know how to feel about it.
+    - What should I do after finding my boyfriend flirting on dating websites?
+    - How can I get over my fear of public embarrassment?
+    - Is self-diagnosing okay?
+    - I'm not sure if I have social anxiety disorder.
+    - Why do I get angry so easily?
+    - How do I stop a bully who adults wouldn't recognize as bullying without speaking to the bully?
+    - I feel like my relationship is falling apart.
+    - Why do I find pleasure in thinking about killing?
+    - How can I help my husband after a suicide attempt?
+    - Is it normal to dislike one child?
+    - My fiancé's ex-husband shows up unannounced.
+    - How do therapists characterize personality types?
+    - Can I go see a psychiatrist without my dad finding out, even if I am on his insurance?
+    - Is it a normal practice for a team of doctors who are connected by state or profession to discontinue your treatment?
+    - How do I end an unhealthy relationship?
+    - I think I empathize too much.
+    - Is it normal to cry during therapy?
+    - I'm worried about my new job.
+    - Is screaming and cussing at your child considered emotional abuse?
+    - I over endulge when I drink alcohol and feel extremely guilty about it the next day.
+    - I am very self conscious about my body.
+    - I'm attracted to my boss.
+    - I did something I can't get over.
+    - I have long spurts of depression, anxiety, and need change constantly—why?
+    - My boyfriend does not do some sexual things with me that he has done with other people.
+    - My sexual partner wants me to reimburse him on a hotel room.
+    - My girlfriend is always accusing me of cheating on her when I haven't
+    - What can I do about my roommate's drinking problem?
+    - I feel completely alone in my marriage.
+    - How do I become more open minded or less irritable and happier?
+    - Why can't I let myself trust my partner?
+    - What's going on with these mood swings?
+    - What's wrong with me for going to summer school?
+    - I want to make my own decisions.
+    - Why can't I change?
+    - My girlfriend can't stand it when I touch her.
+    - Why don't I feel normal?
+    - How can I deal with my daughter's rebellious behavior?
+    - How do I get over rape trauma syndrome?
+    - How do I move on from almost being raped?
+    - How do I get over a fear of pain during sex?
+    - How do I deal with all of my disorders?
+    - How do I let go of the abuse my dad showed me?
+    - How do I cope with losing a child?
+    - Why do I feel worthless and tired?
+    - I want help with how to deal with my abused daughter.
+    - How do I get my husband back?
+    - Is there anything I can do about my therapist blocking my psychiatric services?
+    - My boyfriend is in the hospital. They won’t tell me what’s wrong and if or when he’s coming back.
+    - I have difficulty with communication.
+    - Is it possible for a person to stop feeling emotions?
+    - Why am I starting to not like myself?
+    - How can I not hate myself?
+    - Why do I have low self-esteem and lack confidence?
+    - How do I become more self-confident in general?
+    - I want to become a better man.
+    - Why do I always push my boyfriend away?
+    - Why do I feel sad all the time?
+    - Why do I feel like I'm always wrong in everything in my relationship?
+    - I want to have a threesome with my husband and another girl, but  I feel really nervous.
+    - Why is it hard for me to express myself?
+    - How can I keep a long distance relationship going?
+    - How do I tell one parent I want to live with the other one?
+    - I just feel so alone.
+    - How can I ask my boyfriend about who he's texting?
+    - I Sometimes I feel like I hate myself.
+    - How do I move on?
+    - Overcoming fears.
+    - How can I get out of my head and stop obsessive thoughts?
+    - How can I get counseling  if my primary care physician won't help?
+    - I don't want to keep going back and forth between my parents' houses.
+    - How can I help my girlfriend?
+    - What can I do about my dad?
+    - Is it possible for a couple to overcome cheating if it only happened once?
+    - Why doesn't any guy want to date me?
+    - How should I handle the child I had with my ex-wife?
+    - How does counseling help people?
+    - What makes a good marriage?
+    - I feel like my existence is meaningless.
+    - Why can't I get an erection with my girlfriend?
+    - How can I best fight the winter blues?
+    - I need help coping with depression as a result of stress.
+    - Can I sign my brother into a mental health facility?
+    - Is it wrong for me to be attracted to my girlfriend?
+    - Why do I always get ignored by people?
+    - How can I help myself and change my behavior?
+    - How do I get over a person I fell in love with?
+    - How can I make the voices stop?
+    - I don't know how to communicate with my adult daughter.
+    - How can I deal with my depression?
+    - How do I open things up with a therapist without fearing judgment and condescension?
+    - How do I deal with my alcoholic boyfriend with a dark past?
+    - I feel stuck in life. What can I do?
+    - PTSD is impacting my whole life.
+    - Is it normal to go into therapy feeling nervous?
+    - How do I get my husband to listen to me?
+    - How can I be less dependent on my boyfriend?
+    - I'm very depressed?
+    - How can I not miss my boyfriend while he's in Ireland?
+    - Am I overreacting by breaking up with my boyfriend because he called me a particular profanity?
+    - How can I help my fiancé accept and let go of my past?
+    - What makes my husband so selfish when it comes to my feelings?
+    - My dad is mad because I identify as a male and I was born a female.
+    - My boyfriend is upset about my friendship with another guy
+    - How do I tell a girl that I crossdress?
+    - How do I stop feeling empty?
+    - How can I be less stressed?
+    - Can i learn to be happy alone?
+    - My mother is trying to control my life and I don't know what to do.
+    - I'm concerned about my 12 year old daughter.
+    - Why am I experiencing dfficulty maintaining an erection?
+    - How do I deal with bullying at school?
+    - How do I get over imposter syndrome?
+    - How does counseling end?
+    - How does someone approach a counselor?
+    - My family says I have depression.
+    - I'm in a relationship, and I think I like my ex-boyfriend. Who do I choose?
+    - How can I cope with work related stress better?
+    - My daughter isn't acting her age.
+    - What happens in a counseling session?
+    - I want to feel more comfortable around people.
+    - What are the skills needed by a counselor?
+    - I don't like going outside anymore.
+    - How long do I wait on my ex-fiancé to choose me over his ex-girlfriend?
+    - How do I stop sneaking away from home at night?
+    - Why can't I stop these thoughts?
+    - Are some clients more difficult than others?
+    - How do I fix my relationship?
+    - My brother is an addict. He has does nothing but ruin my family. I don't know how to cope with it anymore.
+    - What can I do about my children blaming me for their addictions?
+    - I found drugs in my moms drawer—what should I do?
+    - I don't know if my ex-boyfriend is using opiates again.
+    - How do I save my marriage?
+    - How to get over somebody?
+    - I don't know how to deal with my boyfriend's father.
+    - I feel like my mother doesn't support me.
+    - What are the long term effects of losing one's adopted mother?
+    - How do I help my 20 year old boyfriend who says he hates his life?
+
+
