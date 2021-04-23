@@ -49,3 +49,9 @@ Steps for setting up backend:
    - cd Backend/Server/Chitchat-Server/counsel-chat-server
    - You can use bat files to run.
      - double_click: command_for_interaction.bat
+
+
+### Android Application
+
+- For Accessing the updated integrated app use following repo
+    https://github.com/VINCI0/BroBot
