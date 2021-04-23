@@ -20,33 +20,33 @@ mood History.
 Steps for setting up backend:
 
 1. Run Django Backend
-	1.1. cd Backend/Server/Django-server/Brobot
-	1.2. Activate python virtual env
-		virtualenv venv
-		venv/Scripts/activate
-	1.3. Install Django
-		python -m pip install Django
-	1.4. Install django-rest
-		pip install djangorestframework
-		pip install markdown       # Markdown support for the browsable API.
-		pip install django-filter  # Filtering support
-	1.5. Start django server
-		python manage.py runserver <ip>:<port>
+	* Sub cd Backend/Server/Django-server/Brobot
+	* Sub Activate python virtual env
+		* Sub virtualenv venv
+		* Sub venv/Scripts/activate
+	* Sub Install Django
+		* Sub python -m pip install Django
+	* Sub Install django-rest
+		* Sub pip install djangorestframework
+		* Sub pip install markdown       # Markdown support for the browsable API.
+		* Sub pip install django-filter  # Filtering support
+	* Sub Start django server
+		* Sub python manage.py runserver <ip>:<port>
 		
 2. Run Dialogue Management Server
-	2.1. cd Backend/DialogueManagement/BroBot_Gpt
-	2.2. Activate python virtualenv
-		virtualenv venv 
-		venv/Scripts/activate
-	2.3. Install rasa
-		pip install rasa[full]
-	2.4. cd chatbot -> Activate Server => a. rasa run actions b. rasa run
-	2.4. Alternatively, after installing rasa, you can use bat files to run
-		double_click: rasa_run_actions.bat
-		double_click: rasa_run.bat
+	* Sub cd Backend/DialogueManagement/BroBot_Gpt
+	* Sub Activate python virtualenv
+		* Sub virtualenv venv 
+		* Sub venv/Scripts/activate
+	* Sub Install rasa
+		* Sub pip install rasa[full]
+	* Sub cd chatbot -> Activate Server => a. rasa run actions b. rasa run
+	* Sub Alternatively, after installing rasa, you can use bat files to run
+		* Sub double_click: rasa_run_actions.bat
+		* Sub double_click: rasa_run.bat
 
 3.	Run Conversational AI Server:
-	3.1. cd Backend/Server/Chitchat-Server/counsel-chat-server
-	3.2. You can use bat files to run.
-		double_click: command_for_interaction.bat
+	* Sub cd Backend/Server/Chitchat-Server/counsel-chat-server
+	* Sub You can use bat files to run.
+		* Sub double_click: command_for_interaction.bat
 	
